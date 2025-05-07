@@ -1,36 +1,149 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的個人網站</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>卓立物理治療所</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      background-color: #f2f2f2;
+      margin: 0;
+    }
+    nav ul li {
+      padding: 15px 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+    .hero {
+      background-image: url('https://www.zhuoli.com.tw/images/外觀01.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
+    .section {
+      padding: 40px 20px;
+    }
+    .section h2 {
+      margin-bottom: 20px;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .service-item {
+      flex: 1 1 200px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>嗨，我是小明</h1>
-    <p>前端工程師 • 設計愛好者 • 創作者</p>
+    <h1>卓立物理治療所</h1>
+    <p>傾聽・專業・用心</p>
   </header>
 
-  <main>
-    <section class="about">
-      <h2>關於我</h2>
-      <p>我熱愛開發有趣的網頁體驗，擁有 3 年 React 和 UI/UX 設計經驗。</p>
-    </section>
+  <nav>
+    <ul>
+      <li><a href="#">關於卓立</a></li>
+      <li><a href="#">醫療團隊</a></li>
+      <li><a href="#">治療項目</a></li>
+      <li><a href="#">影音專區</a></li>
+      <li><a href="#">最新消息</a></li>
+      <li><a href="#">人才招募</a></li>
+      <li><a href="#">聯絡我們</a></li>
+    </ul>
+  </nav>
 
-    <section class="projects">
-      <h2>作品集</h2>
-      <ul>
-        <li><a href="#">個人履歷網站</a></li>
-        <li><a href="#">互動式天氣 App</a></li>
-        <li><a href="#">小型電商前端頁面</a></li>
-      </ul>
-    </section>
-  </main>
+  <div class="hero"></div>
+
+  <section class="section">
+    <h2>關於我們</h2>
+    <p>卓立物理治療所由復健科醫師、神經內科醫師、物理治療師、職能治療師及護理師組成，以疼痛治療及再生醫學為主軸方向，透過團隊方式提供全面有效且適合的治療方式。</p>
+  </section>
+
+  <section class="section">
+    <h2>治療項目</h2>
+    <div class="services">
+      <div class="service-item">
+        <h3>徒手治療（筋膜刀鬆動術）</h3>
+      </div>
+      <div class="service-item">
+        <h3>體外震波治療</h3>
+      </div>
+      <div class="service-item">
+        <h3>高能量雷射治療</h3>
+      </div>
+      <div class="service-item">
+        <h3>低能量雷射治療</h3>
+      </div>
+      <div class="service-item">
+        <h3>高磁能量增肌減脂</h3>
+      </div>
+      <div class="service-item">
+        <h3>射頻電波治療</h3>
+      </div>
+      <div class="service-item">
+        <h3>經皮靜脈雷射血液淨化</h3>
+      </div>
+      <div class="service-item">
+        <h3>磁場熱治療</h3>
+      </div>
+      <div class="service-item">
+        <h3>影像超音波定位分析</h3>
+      </div>
+      <div class="service-item">
+        <h3>兒童治療</h3>
+      </div>
+      <div class="service-item">
+        <h3>一對一運動治療</h3>
+      </div>
+      <div class="service-item">
+        <h3>科技運動按摩</h3>
+      </div>
+      <div class="service-item">
+        <h3>核心運動團課訓練</h3>
+      </div>
+      <div class="service-item">
+        <h3>電熱牽引儀器輔助治療</h3>
+      </div>
+      <div class="service-item">
+        <h3>整合式疼痛治療</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>聯絡資訊</h2>
+    <p>電話：04-7330128；04-7358310</p>
+    <p>地址：彰化市辭修北路250號</p>
+    <p>服務信箱：jl24060607@gmail.com</p>
+  </section>
 
   <footer>
-    <p>© 2025 小明 | <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>© 2025 卓立物理治療所</p>
   </footer>
 </body>
 </html>
-
