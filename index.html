@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>卓立物理治療所（台北）</title>
+  <title>卓立物理治療所（台北院區）- Outstanding Physiotherapy Clinic</title>
   <style>
     body {
       font-family: 'Noto Sans TC', Arial, sans-serif;
@@ -182,13 +182,81 @@
         font-size: 1.2rem;
       }
     }
+    .doctor-info {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      margin: 20px 0;
+      border: 1.5px solid #e3eaf2;
+    }
+    .doctor-info h3 {
+      color: #1a3d6d;
+      margin: 0 0 15px 0;
+      font-size: 1.3rem;
+    }
+    .doctor-info p {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .schedule-table th, .schedule-table td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #e3eaf2;
+    }
+    .schedule-table th {
+      background: #0066cc;
+      color: white;
+    }
+    .schedule-table td.closed {
+      background: #fff5f5;
+      color: #e53e3e;
+    }
+    .schedule-table td.open {
+      background: #f0f9ff;
+    }
+    .treatment-category {
+      margin-bottom: 30px;
+    }
+    .treatment-category h3 {
+      color: #0066cc;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+    .qr-code {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .qr-code img {
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    .qr-code p {
+      margin-top: 10px;
+      color: #666;
+    }
+    .location-info {
+      color: #666;
+      margin-top: 5px;
+      font-size: 0.9em;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>卓立物理治療所（台北）</h1>
-    <p>傾聽・專業・用心</p>
+    <h1>卓立物理治療所（台北院區）</h1>
+    <p>Outstanding Physiotherapy Clinic</p>
   </header>
 
   <nav>
@@ -209,42 +277,115 @@
   </div>
 
   <section class="section">
-    <h2>關於我們</h2>
-    <p>卓立物理治療所由專業物理治療師組成，以疼痛治療為主軸方向，透過專業的評估與治療，提供全面有效且適合的物理治療方式。</p>
+    <h2>醫療團隊</h2>
+    <div class="doctor-info">
+      <h3>院長 劉柏孜 物理治療師</h3>
+      <p>Po-tzu Liu, PT (Physical Therapist)</p>
+      <h4>學經歷</h4>
+      <ul>
+        <li>高考合格物理治療師</li>
+        <li>成功大學物理治療系學士</li>
+      </ul>
+      <h4>專長</h4>
+      <ul>
+        <li>脊椎側彎矯正</li>
+        <li>徒手治療</li>
+        <li>骨盆底肌的鍛鍊</li>
+      </ul>
+    </div>
   </section>
 
   <section class="section">
     <h2>治療項目</h2>
-    <div class="services">
-      <div class="service-item"><span class="service-icon">🖐️</span><h3>徒手治療（筋膜刀鬆動術）</h3></div>
-      <div class="service-item"><span class="service-icon">💥</span><h3>體外震波治療</h3></div>
-      <div class="service-item"><span class="service-icon">🔆</span><h3>高能量雷射治療</h3></div>
-      <div class="service-item"><span class="service-icon">✨</span><h3>低能量雷射治療</h3></div>
-      <div class="service-item"><span class="service-icon">🧲</span><h3>高磁能量增肌減脂</h3></div>
-      <div class="service-item"><span class="service-icon">📡</span><h3>射頻電波治療</h3></div>
-      <div class="service-item"><span class="service-icon">💉</span><h3>經皮靜脈雷射血液淨化</h3></div>
-      <div class="service-item"><span class="service-icon">♨️</span><h3>磁場熱治療</h3></div>
-      <div class="service-item"><span class="service-icon">🩺</span><h3>影像超音波定位分析</h3></div>
-      <div class="service-item"><span class="service-icon">👶</span><h3>兒童治療</h3></div>
-      <div class="service-item"><span class="service-icon">🤸‍♂️</span><h3>一對一運動治療</h3></div>
-      <div class="service-item"><span class="service-icon">💆‍♂️</span><h3>科技運動按摩</h3></div>
-      <div class="service-item"><span class="service-icon">🏋️‍♀️</span><h3>核心運動團課訓練</h3></div>
-      <div class="service-item"><span class="service-icon">🦾</span><h3>電熱牽引儀器輔助治療</h3></div>
-      <div class="service-item"><span class="service-icon">🩹</span><h3>整合式疼痛治療</h3></div>
+    
+    <div class="treatment-category">
+      <h3>運動治療（個人/小團體）</h3>
+      <div class="services">
+        <div class="service-item"><span class="service-icon">🏋️‍♂️</span><h3>脊椎減壓運動 SPS</h3></div>
+        <div class="service-item"><span class="service-icon">🤸‍♂️</span><h3>動態神經肌肉穩定術 DNS</h3></div>
+        <div class="service-item"><span class="service-icon">💪</span><h3>骨盆底肌鍛鍊 PFS</h3></div>
+      </div>
     </div>
+
+    <div class="treatment-category">
+      <h3>徒手治療</h3>
+      <div class="services">
+        <div class="service-item"><span class="service-icon">🖐️</span><h3>顱薦平衡 CST & SER</h3></div>
+        <div class="service-item"><span class="service-icon">✋</span><h3>內臟筋膜放鬆 VM</h3></div>
+        <div class="service-item"><span class="service-icon">💆‍♂️</span><h3>淋巴引流 LDT</h3></div>
+        <div class="service-item"><span class="service-icon">🔄</span><h3>抗扭鬆弛術 SCS</h3></div>
+      </div>
+    </div>
+
+    <div class="treatment-category">
+      <h3>高階儀器</h3>
+      <div class="services">
+        <div class="service-item"><span class="service-icon">💥</span><h3>聚焦式震波 ESWT</h3></div>
+        <div class="service-item"><span class="service-icon">🔆</span><h3>高能量雷射 HILT</h3></div>
+        <div class="service-item"><span class="service-icon">⚡</span><h3>聲波動力平衡治療 KKT</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>預約時間</h2>
+    <p style="color: #e53e3e; margin-bottom: 20px;">週日公休</p>
+    <table class="schedule-table">
+      <tr>
+        <th>時段</th>
+        <th>一</th>
+        <th>二</th>
+        <th>三</th>
+        <th>四</th>
+        <th>五</th>
+        <th>六</th>
+      </tr>
+      <tr>
+        <td>9:00-12:00</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+      </tr>
+      <tr>
+        <td>13:00-18:00</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="closed">休</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="open">13-17</td>
+      </tr>
+      <tr>
+        <td>18:00-21:00</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="open">●</td>
+        <td class="closed">休</td>
+      </tr>
+    </table>
   </section>
 
   <section class="section">
     <h2>聯絡資訊</h2>
     <div class="contact-info">
-      <p>電話：02 2521 3958</p>
+      <p>電話：(02) 2521-3958</p>
       <p>地址：104台北市中山區南京東路二段100號3樓之2</p>
+      <p class="location-info">松江南京捷運站（1號出口）往左轉 三豐大樓內</p>
       <p>服務信箱：outstanding.pt.taipei@gmail.com</p>
+    </div>
+    <div class="qr-code">
+      <img src="https://raw.githubusercontent.com/willsbor/outstanding-pt/main/line-qrcode.png" alt="LINE QR Code">
+      <p>歡迎線上預約</p>
     </div>
   </section>  
 
   <footer>
-    <p>© 2025 卓立物理治療所</p>
+    <p>© 2025 卓立物理治療所（台北院區）</p>
   </footer>
 </body>
 </html>
