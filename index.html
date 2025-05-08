@@ -62,10 +62,10 @@
     }
     .hero {
       position: relative;
-      background-image: url('https://www.zhuoli.com.tw/images/%E5%A4%96%E8%A7%8001.jpg');
+      background-image: url('images/clinic-exterior.jpg');
       background-size: cover;
       background-position: center;
-      height: 320px;
+      height: 420px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -301,6 +301,61 @@
         height: 30px;
       }
     }
+
+    .gallery-section {
+      background: #fff;
+      padding: 60px 20px;
+      margin: 40px 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      
+      .gallery-item img {
+        height: 200px;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -312,6 +367,7 @@
 
   <nav>
     <ul>
+      <li><a href="index.html">首頁</a></li>
       <li><a href="about.html">關於卓立</a></li>
       <li><a href="team-and-services.html">醫療團隊</a></li>
       <li><a href="team-and-services.html#services">治療項目</a></li>
@@ -322,8 +378,26 @@
 
   <div class="hero">
     <div class="hero-content">
-      <h2>專業疼痛治療・全方位照護</h2>
-      <p>預約制｜全自費醫療｜初診請攜帶診斷書與檢查報告</p>
+      <h2>專業的物理治療團隊</h2>
+      <p>為您提供最優質的復健治療服務</p>
+    </div>
+  </div>
+
+  <div class="section gallery-section">
+    <h2>診所環境</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/treatment-room1.jpg" alt="治療室環境">
+        <div class="gallery-caption">舒適的治療空間</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/equipment1.jpg" alt="先進的治療設備">
+        <div class="gallery-caption">專業治療設備</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/waiting-area.jpg" alt="等候區">
+        <div class="gallery-caption">寬敞的等候區域</div>
+      </div>
     </div>
   </div>
 

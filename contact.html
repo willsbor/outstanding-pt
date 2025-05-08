@@ -169,6 +169,36 @@
         height: 300px;
       }
     }
+    .clinic-image {
+      margin-bottom: 24px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+    .clinic-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .transportation-info {
+      margin-top: 24px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .transport-item {
+      margin-top: 16px;
+    }
+    .transport-item h4 {
+      color: #0066cc;
+      margin-bottom: 8px;
+    }
+    .transport-item p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -193,6 +223,9 @@
     <h2>聯絡資訊</h2>
     <div class="contact-grid">
       <div class="contact-info">
+        <div class="clinic-image">
+          <img src="images/clinic-exterior.jpg" alt="卓立物理治療所外觀">
+        </div>
         <h3>聯絡方式</h3>
         <div class="contact-item">
           <span class="contact-icon">📞</span>
@@ -203,20 +236,16 @@
         <div class="contact-item">
           <span class="contact-icon">📍</span>
           <div class="contact-text">
-            <p>地址：104台北市中山區南京東路二段100號3樓之2</p>
-            <p style="color: #666; font-size: 0.9em;">松江南京捷運站（1號出口）往左轉 三豐大樓內</p>
+            <p>地址：台北市中山區南京東路二段8號11樓</p>
           </div>
         </div>
         <div class="contact-item">
-          <span class="contact-icon">✉️</span>
+          <span class="contact-icon">⏰</span>
           <div class="contact-text">
-            <p>信箱：<a href="mailto:outstanding.pt.taipei@gmail.com">outstanding.pt.taipei@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <span class="contact-icon">💬</span>
-          <div class="contact-text">
-            <p>LINE：<a href="https://line.me/ti/p/~@outstanding.pt" target="_blank">@outstanding.pt</a></p>
+            <p>營業時間：</p>
+            <p>週一至週五：09:00-21:00</p>
+            <p>週六：09:00-17:00</p>
+            <p>週日休診</p>
           </div>
         </div>
         <div class="social-links">
@@ -226,8 +255,23 @@
           </a>
         </div>
       </div>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4675900317223!2d121.53061799999999!3d25.052778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9406c633ee7%3A0x34e513862a0f4669!2zMTA05Y-w5YyX5biC5Lit5bGx5Y2A5Y2X5Lqs5p2x6Lev5LqM5q61MTAw6Jmf!5e0!3m2!1szh-TW!2stw!4v1710900000000!5m2!1szh-TW!2stw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+      <div class="map-section">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4673124074824!2d121.52940721500857!3d25.051800283968635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9acd397ef03%3A0xd15a8cf2a7ad214!2z5Y2h56uL54mp55CG5rK755So5omA77yI5Y-w5YyX6Zmi5Y2A77yJ!5e0!3m2!1szh-TW!2stw!4v1624586433619!5m2!1szh-TW!2stw" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="transportation-info">
+          <h3>交通資訊</h3>
+          <div class="transport-item">
+            <h4>🚇 捷運</h4>
+            <p>松江南京站（松山新店線）2號出口，步行約3分鐘</p>
+          </div>
+          <div class="transport-item">
+            <h4>🚌 公車</h4>
+            <p>南京松江路口站：1、49、63、214、222、288、505、604、605、622、630、642、643、665、668、672</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -133,6 +133,53 @@
       font-size: 1rem;
       letter-spacing: 1px;
     }
+    .environment-section {
+      margin-top: 60px;
+      padding: 40px 0;
+      background: #f8fafc;
+    }
+    .environment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .env-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .env-item:hover {
+      transform: translateY(-5px);
+    }
+    .env-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .env-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 768px) {
+      .environment-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .env-item img {
+        height: 250px;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -155,8 +202,41 @@
 
   <section class="section">
     <h2>關於卓立</h2>
-    <p>卓立物理治療所以專業的物理治療技術為基礎，結合現代化儀器與個人化運動治療，為每位病患提供全方位的照護服務。我們秉持著專業、用心、尊重的理念，致力於提供最優質的物理治療服務。</p>
-    
+    <div class="about-content">
+      <div class="about-text">
+        <p>卓立物理治療所成立於2023年，由一群熱愛物理治療的專業治療師共同創立。我們致力於提供最優質的物理治療服務，幫助每位病患重拾健康生活。</p>
+        <p>我們的使命是：</p>
+        <ul>
+          <li>提供專業且個人化的物理治療服務</li>
+          <li>持續進修，掌握最新治療技術</li>
+          <li>建立溫馨舒適的治療環境</li>
+          <li>關注病患需求，提供全方位照護</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="environment-section">
+      <h2>診所環境</h2>
+      <div class="environment-grid">
+        <div class="env-item">
+          <img src="images/reception.jpg" alt="接待區">
+          <div class="env-caption">溫馨的接待區域</div>
+        </div>
+        <div class="env-item">
+          <img src="images/treatment-area.jpg" alt="治療區">
+          <div class="env-caption">專業的治療空間</div>
+        </div>
+        <div class="env-item">
+          <img src="images/equipment-room.jpg" alt="設備室">
+          <div class="env-caption">先進的治療設備</div>
+        </div>
+        <div class="env-item">
+          <img src="images/consultation-room.jpg" alt="諮詢室">
+          <div class="env-caption">私密的諮詢空間</div>
+        </div>
+      </div>
+    </div>
+
     <div class="values-grid">
       <div class="value-card">
         <div class="value-icon">🤝</div>
