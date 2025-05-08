@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聯絡我們 - 卓立物理治療所（台北院區）</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8fafc;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #0072c6 60%, #005fa3 100%);
+      color: white;
+      padding: 32px 20px 24px 20px;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    nav {
+      background: #e6f0fa;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 8px;
+    }
+    nav ul li a {
+      display: block;
+      padding: 14px 22px;
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: 500;
+      border-radius: 24px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav ul li a:hover {
+      background: #0066cc;
+      color: #fff;
+    }
+    .section {
+      padding: 48px 20px 36px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      margin-bottom: 24px;
+      font-size: 1.6rem;
+      color: #0066cc;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .contact-info {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border: 1.5px solid #e3eaf2;
+    }
+    .contact-info h3 {
+      color: #1a3d6d;
+      margin: 0 0 20px 0;
+      font-size: 1.3rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .contact-icon {
+      font-size: 1.5rem;
+      margin-right: 16px;
+      color: #0066cc;
+      min-width: 32px;
+      text-align: center;
+    }
+    .contact-text {
+      line-height: 1.6;
+    }
+    .contact-text a {
+      color: #0066cc;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-text a:hover {
+      color: #004999;
+      text-decoration: underline;
+    }
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border: 1.5px solid #e3eaf2;
+      background: #fff;
+      height: 450px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .social-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+    footer {
+      background: #e6f0fa;
+      padding: 22px 10px;
+      text-align: center;
+      color: #555;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .map-container {
+        height: 300px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>卓立物理治療所（台北院區）</h1>
+    <p>Outstanding Physiotherapy Clinic</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="about.html">關於卓立</a></li>
+      <li><a href="team-and-services.html">醫療團隊</a></li>
+      <li><a href="team-and-services.html#services">治療項目</a></li>
+      <li><a href="#">人才招募</a></li>
+      <li><a href="contact.html">聯絡我們</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <h2>聯絡資訊</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>聯絡方式</h3>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div class="contact-text">
+            <p>電話：<a href="tel:0225213958">(02) 2521-3958</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div class="contact-text">
+            <p>地址：104台北市中山區南京東路二段100號3樓之2</p>
+            <p style="color: #666; font-size: 0.9em;">松江南京捷運站（1號出口）往左轉 三豐大樓內</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div class="contact-text">
+            <p>信箱：<a href="mailto:outstanding.pt.taipei@gmail.com">outstanding.pt.taipei@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">💬</span>
+          <div class="contact-text">
+            <p>LINE：<a href="https://line.me/ti/p/~@outstanding.pt" target="_blank">@outstanding.pt</a></p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61575688389384" target="_blank" class="social-link">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzE4NzdGMiIgZD0iTTI0IDEyLjA3M2MwLTYuNjI3LTUuMzczLTEyLTEyLTEycy0xMiA1LjM3My0xMiAxMmMwIDUuOTkgNC4zODggMTAuOTU0IDEwLjEyNSAxMS44NTR2LTguMzg1SDcuMDc4di0zLjQ3aDMuMDQ3VjkuNDNjMC0zLjAwNyAxLjc5Mi00LjY2OSA0LjUzMy00LjY2OSAxLjMxMiAwIDIuNjg2LjIzNSAyLjY4Ni4yMzV2Mi45NTNoLTEuNTEzYy0xLjQ5IDAtMS45NTUuOTI1LTEuOTU1IDEuODc0djIuMjVoMy4zMjhsLS41MzIgMy40N2gtMi43OTZ2OC4zODVDMTkuNjEyIDIzLjAyNyAyNCAxOC4wNjIgMjQgMTIuMDczeiIvPjwvc3ZnPg==" alt="Facebook" class="social-icon">
+            <span>Facebook 粉絲專頁</span>
+          </a>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4675900317223!2d121.53061799999999!3d25.052778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9406c633ee7%3A0x34e513862a0f4669!2zMTA05Y-w5YyX5biC5Lit5bGx5Y2A5Y2X5Lqs5p2x6Lev5LqM5q61MTAw6Jmf!5e0!3m2!1szh-TW!2stw!4v1710900000000!5m2!1szh-TW!2stw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 卓立物理治療所（台北院區）</p>
+  </footer>
+</body>
+</html> 
