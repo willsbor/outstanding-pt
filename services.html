@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>關於卓立 - 卓立物理治療所（台北院區）</title>
+  <title>治療項目 - 卓立物理治療所（台北院區）</title>
   <style>
     body {
       font-family: 'Noto Sans TC', Arial, sans-serif;
@@ -72,58 +72,48 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    .services {
+      display: flex;
+      flex-wrap: wrap;
       gap: 24px;
-      margin: 32px 0;
+      justify-content: center;
     }
-    .value-card {
+    .service-item {
+      flex: 1 1 220px;
+      max-width: 240px;
+      min-width: 180px;
       background: #fff;
-      padding: 32px 24px;
-      border-radius: 16px;
+      border-radius: 14px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 28px 12px 18px 12px;
       text-align: center;
+      margin-bottom: 8px;
+      transition: transform 0.18s, box-shadow 0.18s;
       border: 1.5px solid #e3eaf2;
     }
-    .value-card h3 {
-      color: #1a3d6d;
-      margin: 16px 0;
-      font-size: 1.3rem;
+    .service-item:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(0,102,204,0.13);
+      border-color: #b3d6f7;
     }
-    .value-card p {
-      color: #444;
-      line-height: 1.6;
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .service-item h3 {
+      font-size: 1.08rem;
       margin: 0;
-    }
-    .value-icon {
-      font-size: 2.5rem;
-      color: #0066cc;
-      margin-bottom: 16px;
-    }
-    .branches {
-      margin-top: 48px;
-    }
-    .branch-card {
-      background: #fff;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      margin-bottom: 24px;
-      border: 1.5px solid #e3eaf2;
-    }
-    .branch-card h3 {
+      font-weight: 600;
       color: #1a3d6d;
-      margin: 0 0 16px 0;
-      font-size: 1.3rem;
     }
-    .branch-card a {
+    .treatment-category {
+      margin-bottom: 30px;
+    }
+    .treatment-category h3 {
       color: #0066cc;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .branch-card a:hover {
-      text-decoration: underline;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
     }
     footer {
       background: #e6f0fa;
@@ -132,53 +122,6 @@
       color: #555;
       font-size: 1rem;
       letter-spacing: 1px;
-    }
-    .environment-section {
-      margin-top: 60px;
-      padding: 40px 0;
-      background: #f8fafc;
-    }
-    .environment-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 30px;
-    }
-    .env-item {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .env-item:hover {
-      transform: translateY(-5px);
-    }
-    .env-item img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      display: block;
-    }
-    .env-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.7);
-      color: white;
-      padding: 12px;
-      text-align: center;
-      font-size: 1.1rem;
-    }
-    @media (max-width: 768px) {
-      .environment-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-      .env-item img {
-        height: 250px;
-      }
     }
     .floating-line-btn {
       position: fixed;
@@ -273,69 +216,36 @@
   </nav>
 
   <section class="section">
-    <h2>關於卓立</h2>
-    <div class="about-content">
-      <div class="about-text">
-        <p>卓立物理治療所成立於2023年，由一群熱愛物理治療的專業治療師共同創立。我們致力於提供最優質的物理治療服務，幫助每位病患重拾健康生活。</p>
-        <p>我們的使命是：</p>
-        <ul>
-          <li>提供專業且個人化的物理治療服務</li>
-          <li>持續進修，掌握最新治療技術</li>
-          <li>建立溫馨舒適的治療環境</li>
-          <li>關注病患需求，提供全方位照護</li>
-        </ul>
+    <h2>治療項目</h2>
+    
+    <div class="treatment-category">
+      <h3>運動治療（個人/小團體）</h3>
+      <div class="services">
+        <div class="service-item"><span class="service-icon">🏋️‍♂️</span><h3>脊椎減壓運動 SPS</h3></div>
+        <div class="service-item"><span class="service-icon">🤸‍♂️</span><h3>動態神經肌肉穩定術 DNS</h3></div>
+        <div class="service-item"><span class="service-icon">💪</span><h3>骨盆底肌鍛鍊 PFS</h3></div>
       </div>
     </div>
 
-    <div class="values-grid">
-      <div class="value-card">
-        <div class="value-icon">🤝</div>
-        <h3>尊重（Respect）</h3>
-        <p>以同理心對待每位病患，尊重個別需求，建立互信的治療關係。</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">💪</div>
-        <h3>專業（Profession）</h3>
-        <p>專注於物理治療三大核心：徒手治療、運動治療、儀器治療。</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🎯</div>
-        <h3>精準（Precision）</h3>
-        <p>透過專業評估，為每位病患制定最適合的治療計畫。</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">♾️</div>
-        <h3>持續（Continuity）</h3>
-        <p>持續追蹤治療成效，確保病患獲得最佳復健效果。</p>
+    <div class="treatment-category">
+      <h3>徒手治療</h3>
+      <div class="services">
+        <div class="service-item"><span class="service-icon">🖐️</span><h3>顱薦平衡 CST & SER</h3></div>
+        <div class="service-item"><span class="service-icon">✋</span><h3>內臟筋膜放鬆 VM</h3></div>
+        <div class="service-item"><span class="service-icon">💆‍♂️</span><h3>淋巴引流 LDT</h3></div>
+        <div class="service-item"><span class="service-icon">🔄</span><h3>抗扭鬆弛術 SCS</h3></div>
       </div>
     </div>
 
-    <div class="branches">
-      <h2>卓立分院</h2>
-      <div class="branch-card">
-        <h3>台北院區</h3>
-        <p>地址：104台北市中山區南京東路二段100號3樓之2</p>
-        <p>電話：<a href="tel:0225213958">(02) 2521-3958</a></p>
-        <p>特色：位於松江南京捷運站（1號出口）旁，交通便利。專注於運動治療、徒手治療與高階儀器治療。</p>
-      </div>
-      <div class="branch-card">
-        <h3>彰化院區</h3>
-        <p>地址：彰化市辭修北路250號</p>
-        <p>電話：<a href="tel:047330128">04-7330128</a>；<a href="tel:047358310">04-7358310</a></p>
-        <p><a href="https://www.zhuoli.com.tw/about-us.html" target="_blank" rel="noopener noreferrer">前往彰化院區網站 →</a></p>
-      </div>
-      <div class="branch-card">
-        <h3>台中院區</h3>
-        <p>地址：台中市大里區大里路98-1號(2號)</p>
-        <p>電話：<a href="tel:0424835525">04-24835525</a>；<a href="tel:0424837755">04-24837755</a></p>
-        <p><a href="https://www.jl-pmrpt.com/about-us.html" target="_blank" rel="noopener noreferrer">前往台中院區網站 →</a></p>
+    <div class="treatment-category">
+      <h3>高階儀器</h3>
+      <div class="services">
+        <div class="service-item"><span class="service-icon">💥</span><h3>聚焦式震波 ESWT</h3></div>
+        <div class="service-item"><span class="service-icon">🔆</span><h3>高能量雷射 HILT</h3></div>
+        <div class="service-item"><span class="service-icon">⚡</span><h3>聲波動力平衡治療 KKT</h3></div>
       </div>
     </div>
   </section>
-
-  <footer>
-    <p>© 2025 卓立物理治療所（台北院區）</p>
-  </footer>
 
   <a href="https://lin.ee/jYtExDW" class="floating-line-btn" target="_blank" rel="noopener noreferrer">
     <img src="images/LINE_Brand_icon.png" alt="LINE" />
@@ -343,5 +253,9 @@
   <a href="https://www.facebook.com/profile.php?id=61575688389384" class="floating-fb-btn" target="_blank" rel="noopener noreferrer">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
   </a>
+
+  <footer>
+    <p>© 2025 卓立物理治療所（台北院區）</p>
+  </footer>
 </body>
 </html> 
