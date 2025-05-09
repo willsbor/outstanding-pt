@@ -199,6 +199,78 @@
       font-size: 0.95rem;
       line-height: 1.6;
     }
+    .floating-line-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #00B900;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      z-index: 1000;
+      text-decoration: none;
+    }
+    .floating-line-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .floating-line-btn img {
+      width: 36px;
+      height: 36px;
+    }
+    .floating-fb-btn {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #1877F2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      z-index: 1000;
+      text-decoration: none;
+    }
+    .floating-fb-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .floating-fb-btn img {
+      width: 36px;
+      height: 36px;
+    }
+    @media (max-width: 600px) {
+      .floating-line-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+      .floating-line-btn img {
+        width: 30px;
+        height: 30px;
+      }
+      .floating-fb-btn {
+        bottom: 70px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+      .floating-fb-btn img {
+        width: 30px;
+        height: 30px;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -245,10 +317,7 @@
         <div class="contact-item">
           <span class="contact-icon">⏰</span>
           <div class="contact-text">
-            <p>營業時間：</p>
-            <p>週一至週五：09:00-21:00</p>
-            <p>週六：09:00-17:00</p>
-            <p>週日休診</p>
+            <!-- 營業時間已移除 -->
           </div>
         </div>
         <div class="social-links">
@@ -282,5 +351,12 @@
   <footer>
     <p>© 2025 卓立物理治療所（台北院區）</p>
   </footer>
+
+  <a href="https://line.me/ti/p/~@outstanding.pt" class="floating-line-btn" target="_blank" rel="noopener noreferrer">
+    <img src="https://line.me/static/44cc71e8ce5f196b4dda67053083b5c5/84249/icon-line-app.png" alt="LINE" />
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61575688389384" class="floating-fb-btn" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+  </a>
 </body>
 </html> 

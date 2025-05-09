@@ -169,6 +169,31 @@
       width: 36px;
       height: 36px;
     }
+    .floating-fb-btn {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #1877F2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      z-index: 1000;
+      text-decoration: none;
+    }
+    .floating-fb-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .floating-fb-btn img {
+      width: 36px;
+      height: 36px;
+    }
     @media (max-width: 600px) {
       .floating-line-btn {
         bottom: 20px;
@@ -177,6 +202,16 @@
         height: 50px;
       }
       .floating-line-btn img {
+        width: 30px;
+        height: 30px;
+      }
+      .floating-fb-btn {
+        bottom: 70px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+      .floating-fb-btn img {
         width: 30px;
         height: 30px;
       }
@@ -204,16 +239,6 @@
   <section class="section">
     <h2>醫療團隊</h2>
     <div class="doctor-info">
-      <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-bottom: 24px;">
-        <div style="flex: 1 1 220px; max-width: 260px; min-width: 180px; text-align: center;">
-          <img src="images/clinic-team1.jpg" alt="物理治療團隊合照" style="width: 100%; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.10); margin-bottom: 8px; object-fit: cover; height: 180px;">
-          <div style="color: #555; font-size: 1rem;">物理治療團隊合照</div>
-        </div>
-        <div style="flex: 1 1 220px; max-width: 260px; min-width: 180px; text-align: center;">
-          <img src="images/clinic-team2.jpg" alt="治療師專業形象照" style="width: 100%; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.10); margin-bottom: 8px; object-fit: cover; height: 180px;">
-          <div style="color: #555; font-size: 1rem;">治療師專業形象照</div>
-        </div>
-      </div>
       <h3>院長 劉柏孜 物理治療師</h3>
       <p>Po-tzu Liu, PT (Physical Therapist)</p>
       <h4>學經歷</h4>
@@ -263,7 +288,10 @@
   </section>
 
   <a href="https://line.me/ti/p/~@outstanding.pt" class="floating-line-btn" target="_blank" rel="noopener noreferrer">
-    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTI0IDEwLjMwNWMwLTUuNjktNS41MDQtMTAuMy0xMi0xMC4zcy0xMiA0LjYxLTEyIDEwLjNjMCA1LjA5MSA0LjMxNCA5LjMzOSAxMC4xMjUgMTAuMTM4LjM5NC4wODUuOTMuMjYxIDEuMDY4LjYwNC4xMjIuMzEuMDggLjc5Ny4wMzkgMS4xMTNsLS4xNzIgMS4wNzdjLS4wNTMuMzMzLS4yNDMgMS4zMDIgMS4xMDkuNzEuMzU2LS4xNTUgNi42NTctMy44MzcgOS4wNzctNi41NjYgMS42NzQtMS44MzIgMi40NzQtMy42ODkgMi43NTQtNS4wNzZ6bS01LjIwMiA0LjE1M2MtLjE1Ny4yMTMtLjM4Mi4zNDktLjYyOS4zNDktLjEyMiAwLS4yNDQtLjAzMy0uMzU0LS4wOTlsLTIuNjQ4LTEuNTMzYy0uMzY1LS4yMTEtLjQ4OS0uNjc2LS4yNzgtMS4wNDEuMjEyLS4zNjUuNjc2LS40ODkgMS4wNDEtLjI3OGwyLjY0OCAxLjUzM2MuMzY1LjIxMS40ODkuNjc2LjI3OCAxLjA0MXptLTIuNjQ4LTQuMTUzYzAgLjQxOS0uMzM5Ljc1OC0uNzU4Ljc1OGgtMy43ODh2Mi40MjRjMCAuNDE5LS4zMzkuNzU4LS43NTguNzU4cy0uNzU4LS4zMzktLjc1OC0uNzU4di0zLjE4MmMwLS40MTkuMzM5LS43NTguNzU4LS43NThoNC41NDVjLjQxOSAwIC43NTguMzM5Ljc1OC43NTh6bS00LjU0NS0yLjQyNGMwIC40MTktLjMzOS43NTgtLjc1OC43NThzLS43NTgtLjMzOS0uNzU4LS43NTh2LTMuMTgyYzAtLjQxOS4zMzkuNzU4Ljc1OC43NThzLjc1OC0uMzM5Ljc1OC0uNzU4djMuMTgyem0tMi40MjQgMGMwIC40MTktLjMzOS43NTgtLjc1OC43NThoLTMuNzg4djIuNDI0YzAgLjQxOS0uMzM5Ljc1OC0uNzU4Ljc1OHMtLjc1OC0uMzM5LS43NTgtLjc1OHYtMy4xODJjMC0uNDE5LjMzOS0uNzU4Ljc1OC0uNzU4aDQuNTQ1Yy40MTkgMCAuNzU4LjMzOS43NTguNzU4eiIvPjwvc3ZnPg==" alt="LINE" />
+    <img src="https://line.me/static/44cc71e8ce5f196b4dda67053083b5c5/84249/icon-line-app.png" alt="LINE" />
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61575688389384" class="floating-fb-btn" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
   </a>
 
   <footer>
