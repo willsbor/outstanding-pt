@@ -252,6 +252,26 @@
         height: 30px;
       }
     }
+    .branch-btn {
+      display: inline-block;
+      background: #0066cc;
+      color: #fff !important;
+      font-weight: 700;
+      font-size: 1.08rem;
+      padding: 14px 32px;
+      border-radius: 32px;
+      text-decoration: none;
+      box-shadow: 0 2px 10px rgba(0,102,204,0.10);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      margin: 0 auto;
+    }
+    .branch-btn:hover {
+      background: #005fa3;
+      color: #fff;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 18px rgba(0,102,204,0.18);
+      text-decoration: none;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -319,16 +339,24 @@
         <p>特色：位於松江南京捷運站（1號出口）旁，交通便利。專注於運動治療、徒手治療與高階儀器治療。</p>
       </div>
       <div class="branch-card">
-        <h3>彰化院區</h3>
-        <p>地址：彰化市辭修北路250號</p>
-        <p>電話：<a href="tel:047330128">04-7330128</a>；<a href="tel:047358310">04-7358310</a></p>
-        <p><a href="https://www.zhuoli.com.tw/about-us.html" target="_blank" rel="noopener noreferrer">前往彰化院區網站 →</a></p>
-      </div>
-      <div class="branch-card">
         <h3>台中院區</h3>
         <p>地址：台中市大里區大里路98-1號(2號)</p>
         <p>電話：<a href="tel:0424835525">04-24835525</a>；<a href="tel:0424837755">04-24837755</a></p>
-        <p><a href="https://www.jl-pmrpt.com/about-us.html" target="_blank" rel="noopener noreferrer">前往台中院區網站 →</a></p>
+        <div style="text-align:center; margin-top:18px;">
+          <a href="https://www.jl-pmrpt.com/about-us.html" target="_blank" rel="noopener noreferrer" class="branch-btn">
+            <span style="font-size:1.2em; margin-right:8px;">🏥</span>前往台中院區網站
+          </a>
+        </div>
+      </div>
+      <div class="branch-card">
+        <h3>彰化院區</h3>
+        <p>地址：彰化市辭修北路250號</p>
+        <p>電話：<a href="tel:047330128">04-7330128</a>；<a href="tel:047358310">04-7358310</a></p>
+        <div style="text-align:center; margin-top:18px;">
+          <a href="https://www.zhuoli.com.tw/about-us.html" target="_blank" rel="noopener noreferrer" class="branch-btn">
+            <span style="font-size:1.2em; margin-right:8px;">🏥</span>前往彰化院區網站
+          </a>
+        </div>
       </div>
     </div>
   </section>
