@@ -304,25 +304,20 @@
         margin-left: 12px;
         margin-right: 12px;
       }
-      .floating-line-btn {
+      .floating-btn {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+      }
+      .floating-btn img {
+        width: 30px;
+        height: 30px;
+      }
+      .floating-btn.fb {
+        bottom: 80px;
+      }
+      .floating-btn.line {
         bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-      }
-      .floating-line-btn img {
-        width: 30px;
-        height: 30px;
-      }
-      .floating-fb-btn {
-        bottom: 90px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-      }
-      .floating-fb-btn img {
-        width: 30px;
-        height: 30px;
       }
       .hero-content p {
         margin-left: 12px;
@@ -399,34 +394,57 @@
       margin-top: 5px;
       font-size: 0.9em;
     }
-    .floating-line-btn {
+    .floating-btn {
       position: fixed;
-      bottom: 30px;
       right: 30px;
       width: 60px;
       height: 60px;
-      background-color: transparent;
+      background: #fff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
       z-index: 1000;
       text-decoration: none;
+      border: 2.5px solid #00B900;
     }
-    
-    .floating-line-btn:hover {
-      transform: translateY(-3px);
+    .floating-btn.fb {
+      border-color: #1877F2;
+      bottom: 100px;
+    }
+    .floating-btn.line {
+      border-color: #00B900;
+      bottom: 30px;
+    }
+    .floating-btn:hover {
+      transform: translateY(-3px) scale(1.05);
       box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
-    
-    .floating-line-btn img {
+    .floating-btn img {
       width: 36px;
       height: 36px;
+      display: block;
     }
-    
+    @media (max-width: 600px) {
+      .floating-btn {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+      }
+      .floating-btn img {
+        width: 30px;
+        height: 30px;
+      }
+      .floating-btn.fb {
+        bottom: 80px;
+      }
+      .floating-btn.line {
+        bottom: 20px;
+      }
+    }
     .gallery-section {
       background: #fff;
       padding: 60px 20px;
@@ -479,32 +497,6 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    .floating-fb-btn {
-      position: fixed;
-      bottom: 100px;
-      right: 30px;
-      width: 60px;
-      height: 60px;
-      background-color: #1877F2;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      z-index: 1000;
-      text-decoration: none;
-    }
-    .floating-fb-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-    }
-    .floating-fb-btn img {
-      width: 36px;
-      height: 36px;
     }
     .mobile-break { display: none; }
     @media (max-width: 600px) {
@@ -659,10 +651,10 @@
     </div>
   </section>  
 
-  <a href="https://lin.ee/jYtExDW" class="floating-line-btn" target="_blank" rel="noopener noreferrer">
+  <a href="https://lin.ee/jYtExDW" class="floating-btn line" target="_blank" rel="noopener noreferrer">
     <img src="images/LINE_Brand_icon.png" alt="LINE" />
   </a>
-  <a href="https://www.facebook.com/profile.php?id=61575688389384" class="floating-fb-btn" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.facebook.com/profile.php?id=61575688389384" class="floating-btn fb" target="_blank" rel="noopener noreferrer">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
   </a>
 
