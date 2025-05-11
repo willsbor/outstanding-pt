@@ -196,7 +196,8 @@
     fetch('header-nav.html')
       .then(res => res.text())
       .then(html => {
-        document.getElementById('header-nav-container').innerHTML = html;
+        document.body.insertAdjacentHTML('afterbegin', html);
+        document.getElementById('header-nav-container').remove();
       });
   </script>
 
