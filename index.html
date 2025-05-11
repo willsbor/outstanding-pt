@@ -280,6 +280,9 @@
       }
       .hero-content h1 {
         font-size: 1.2rem;
+        white-space: normal !important;
+        word-break: break-all;
+        line-height: 1.3;
       }
       .hero-content h2 {
         font-size: 1.2rem;
@@ -312,7 +315,13 @@
         display: inline-block;
         font-weight: 500;
       }
-      .mobile-break { display: block; }
+      .mobile-break {
+        display: block;
+        width: 100%;
+        height: 0;
+        margin: 0;
+        padding: 0;
+      }
     }
     .doctor-info {
       background: #fff;
