@@ -131,7 +131,7 @@
     }
     .hero {
       position: relative;
-      background: #005fa3;
+      background: #005fa3 url('images/zhuoli-sign.jpg') center center / cover no-repeat;
       height: 420px;
       display: flex;
       align-items: center;
@@ -141,7 +141,7 @@
       content: '';
       position: absolute;
       left: 0; top: 0; right: 0; bottom: 0;
-      background: rgba(0, 60, 120, 0.45);
+      background: rgba(0, 60, 120, 0.55);
       z-index: 1;
     }
     .hero-content {
@@ -149,6 +149,11 @@
       z-index: 2;
       color: #fff;
       text-align: center;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
     }
     .hero-content h1 {
       font-size: 2.2rem;
@@ -163,15 +168,15 @@
       letter-spacing: 2px;
       font-weight: 700;
       text-shadow: 0 2px 8px rgba(0,0,0,0.18);
-      margin-left: 16px;
-      margin-right: 16px;
+      margin-left: 0;
+      margin-right: 0;
     }
     .hero-content p {
       font-size: 1.1rem;
       margin: 0;
       text-shadow: 0 1px 4px rgba(0,0,0,0.12);
-      margin-left: 16px;
-      margin-right: 16px;
+      margin-left: 0;
+      margin-right: 0;
     }
     .section {
       padding: 48px 20px 36px 20px;
@@ -273,8 +278,17 @@
         font-size: 1rem;
       }
       .hero {
-        height: 220px;
-        padding-top: 32px;
+        height: 260px;
+      }
+      .hero-content {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .hero-content h2 {
+        font-size: 1.2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
       }
       .brand-sign {
         width: 120px;
