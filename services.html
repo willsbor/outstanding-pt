@@ -204,7 +204,30 @@
     <div class="treatment-category">
       <h3>運動治療（個人/小團體）</h3>
       <div class="services">
-        <div class="service-item"><span class="service-icon">🏋️‍♂️</span><h3>脊椎減壓運動 SPS</h3></div>
+        <div class="service-item sps-toggle" tabindex="0" style="cursor:pointer;">
+          <span class="service-icon">🏋️‍♂️</span>
+          <h3 style="display:inline;">脊椎減壓運動 SPS</h3>
+        </div>
+        <div class="sps-detail" style="display:none; background:#f4faff; border-radius:12px; box-shadow:0 2px 8px rgba(0,102,204,0.07); padding:20px 18px; margin-bottom:12px; margin-top:-12px; font-size:1.02rem; color:#234;">
+          <p><b>SPS</b> 是由捷克的 Richard 醫生創立，這項運動系統已經在捷克落地超過30年，幫助無數患者改善肩頸痛、腰背痛、脊椎側彎、椎間盤突出等等問題，甚至讓很多運動員的表現更上一層樓⚽🏀🏊‍♂️<br>
+這套運動在台灣引進的推手是 <b>#小樹螺旋力工作室</b> 的 <b>#廖御如（Lulu）物理治療師</b>，在捷克學成歸來的這6年期間，將這套系統帶回台灣。而本所的劉老師就是Lulu老師的得意弟子，去年6月更獲得SPS國際訓練師資格🥳🎊<br>
+可惜的是，很多台灣的物理治療師還不知道這麼厲害的運動系統🫣 所以我們要把這個好運動推廣出去🤩</p>
+          <b>🌀 SPS運動的三大亮點：</b>
+          <ol style="margin-top:8px;">
+            <li><b>螺旋肌肉鏈運作：</b><br>SPS運動是利用 <b>#螺旋肌肉鏈</b>（闊背肌鏈、斜方肌鏈、胸大肌鏈等）來減壓，讓脊椎得到正確的支持，改善痛症！</li>
+            <li><b>解放脊椎壓力：</b><br>通過螺旋肌肉鏈發力，能讓「#垂直肌肉鏈」放鬆，從而減少脊椎壓力，對抗脊椎側彎、退化、頸椎痛等困擾。</li>
+            <li><b>健康效益：</b><br>
+              <ul style="margin:4px 0 8px 18px;">
+                <li>年紀越小，體態改善越快：小朋友和青少年通常能在短期內感受到體態的改善，有些人可能在幾週內會注意到脊椎的穩定性有所提升。</li>
+                <li>脊椎側彎改善：<br>
+                  👉輕度側彎的情況，通常需要3-6個月進行持續訓練來達到穩定改善。<br>
+                  👉若側彎角度較大，改善的過程可能需要更長時間，但隨著時間的推移，體態穩定性和脊椎健康會有明顯的提升。</li>
+                <li>⚠️ 青春期女孩要特別注意：由於青春期快速成長，部分女生的脊椎側彎可能會有所加劇，因此這個階段的成長過程需要更密集的關注與訓練（建議每週至少進行2次課程）🧐</li>
+                <li>📌 回家練習很重要：每天進行15-30分鐘的SPS運動，有助於維持脊椎的穩定性，預防體態惡化，並且能夠持續提升脊椎的健康和柔韌性</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
         <div class="service-item"><span class="service-icon">🤸‍♂️</span><h3>動態神經肌肉穩定術 DNS</h3></div>
         <div class="service-item"><span class="service-icon">💪</span><h3>骨盆底肌鍛鍊 PFS</h3></div>
       </div>
@@ -241,6 +264,23 @@
       .then(html => {
         document.getElementById('floating-btns-container').innerHTML = html;
       });
+
+    // SPS 展開/收合
+    document.addEventListener('DOMContentLoaded', function() {
+      var spsBtn = document.querySelector('.sps-toggle');
+      var spsDetail = document.querySelector('.sps-detail');
+      if(spsBtn && spsDetail) {
+        spsBtn.addEventListener('click', function() {
+          var show = spsDetail.style.display === 'block';
+          spsDetail.style.display = show ? 'none' : 'block';
+        });
+        spsBtn.addEventListener('keypress', function(e) {
+          if(e.key === 'Enter' || e.key === ' ') {
+            spsBtn.click();
+          }
+        });
+      }
+    });
   </script>
 </body>
 </html> 
