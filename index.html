@@ -493,13 +493,16 @@
       height: 36px;
     }
     .mobile-break { display: none; }
+    @media (max-width: 600px) {
+      .mobile-break { display: inline; }
+    }
     .nowrap { white-space: nowrap; }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1><span class="nowrap">卓立物理治療所</span><br class="mobile-break">（台北院區）</h1>
+    <h1>卓立物理治療所<br class="mobile-break">（台北院區）</h1>
     <p>Outstanding Physiotherapy Clinic</p>
   </header>
 
@@ -516,7 +519,6 @@
 
   <div class="hero">
     <div class="hero-content">
-      <h1>卓立物理治療所<br class="mobile-break">（台北院區）</h1>
       <img src="images/zhuoli-sign.jpg" alt="卓立品牌標誌" class="brand-sign">
       <h2>專業的物理治療團隊</h2>
       <p>為您提供最優質的復健治療服務</p>
