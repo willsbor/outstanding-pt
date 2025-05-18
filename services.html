@@ -258,7 +258,18 @@
     <div class="treatment-category">
       <h3>徒手治療</h3>
       <div class="services">
-        <div class="service-item"><span class="service-icon">🖐️</span><h3>顱薦平衡 CST & SER</h3></div>
+        <div class="service-item cst-toggle" tabindex="0" style="cursor:pointer;">
+          <span class="service-icon">🖐️</span><h3 style="display:inline;">顱薦平衡 CST & SER</h3>
+        </div>
+        <div class="cst-detail" style="display:none; background:#f4faff; border-radius:12px; box-shadow:0 2px 8px rgba(0,102,204,0.07); padding:20px 18px; margin-bottom:12px; margin-top:-12px; font-size:1.02rem; color:#234; text-align:left;">
+          <p>✨現代人很需要的 <b>#腦內SPA：顱薦椎治療（CST）🤗</b><br>
+<b>#顱薦椎治療（#Craniosacral_Therapy，簡稱 #CST）</b>是一項令人驚豔的療法，它不僅能夠舒緩身體的各種不適，還能深層放鬆你的身心，讓你重拾活力與平衡！想像一下，這種療法是通過輕柔的手法，調節你頭部、脊椎和骨盆的微妙律動，幫助你的身體釋放壓力、改善血液循環，甚至提升整體健康！</p>
+          <ul style="margin:8px 0 8px 18px;">
+            <li>😴改善睡眠品質與穩定情緒☺️<br>CST的魔力不僅限於緩解疼痛或壓力，它的好處還包括 <b>#改善睡眠</b> 質量、減少焦慮和情緒波動、#舒緩頭痛、改善脊椎健康，甚至幫助孕婦減輕孕期的不適。它對新生兒也特別有幫助，能幫助處理成長過程中的問題，如腦性麻痺或自閉症，#穩定情緒，增進腦部發展！🧠✨</li>
+            <li>🤯#釋放情緒壓力<br>最棒的是，CST不僅是治療身體，還能調整情緒，幫助你釋放內心的壓力，達到身心合一的療癒效果！這對現代人來說，無疑是非常重要的，因為我們的生活節奏快，壓力大，心理和情緒的健康往往被忽視。</li>
+            <li>🥰提高自癒能力&跟過去的自己和解<br>不論你是有身體的不適，還是想要放鬆心情，CST都能替您身體的內在醫生和治療師的雙手溝通，讓治療師了解您身體最真實的需要，再藉由治療師的雙手提供您適當的協助，幫助您提高身體的 <b>#自癒能力</b>！也能讓您深入更了解自己的身體</li>
+          </ul>
+        </div>
         <div class="service-item"><span class="service-icon">✋</span><h3>內臟筋膜放鬆 VM</h3></div>
         <div class="service-item"><span class="service-icon">💆‍♂️</span><h3>淋巴引流 LDT</h3></div>
         <div class="service-item"><span class="service-icon">🔄</span><h3>抗扭鬆弛術 SCS</h3></div>
@@ -303,6 +314,21 @@
         });
       }
     });
+
+    // CST 展開/收合
+    var cstBtn = document.querySelector('.cst-toggle');
+    var cstDetail = document.querySelector('.cst-detail');
+    if(cstBtn && cstDetail) {
+      cstBtn.addEventListener('click', function() {
+        var show = cstDetail.style.display === 'block';
+        cstDetail.style.display = show ? 'none' : 'block';
+      });
+      cstBtn.addEventListener('keypress', function(e) {
+        if(e.key === 'Enter' || e.key === ' ') {
+          cstBtn.click();
+        }
+      });
+    }
   </script>
 </body>
 </html> 
