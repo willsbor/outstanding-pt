@@ -251,7 +251,15 @@
           </ol>
         </div>
         <div class="service-item"><span class="service-icon">🤸‍♂️</span><h3>動態神經肌肉穩定術 DNS</h3></div>
-        <div class="service-item"><span class="service-icon">💪</span><h3>骨盆底肌鍛鍊 PFS</h3></div>
+        <div class="service-item pfs-toggle" tabindex="0" style="cursor:pointer;">
+          <span class="service-icon">💪</span><h3 style="display:inline;">骨盆底肌鍛鍊 PFS</h3>
+        </div>
+        <div class="pfs-detail" style="display:none; background:#f4faff; border-radius:12px; box-shadow:0 2px 8px rgba(0,102,204,0.07); padding:20px 18px; margin-bottom:12px; margin-top:-12px; font-size:1.02rem; color:#234; text-align:left;">
+          <p>骨盆底肌可說是我們身體的隱形守護者✨<br>
+只要學會正確的收放技巧，無論是防止尿失禁、避免臟器脫垂，還是延緩中年男性的攝護腺問題，通通都能一網打盡🙌<br>
+強大的骨盆底肌還能幫助增強核心穩定性💪，提升運動表現🏃‍♀️，預防背痛，甚至改善性生活品質💕，真的是一舉數得的多重獲益🌟<br>
+學會了正確的呼吸模式和骨盆底肌收放自如的方法，不管是在躺著、坐著、跪著或是站著，都能隨時隨地訓練</p>
+        </div>
       </div>
     </div>
 
@@ -326,6 +334,21 @@
       cstBtn.addEventListener('keypress', function(e) {
         if(e.key === 'Enter' || e.key === ' ') {
           cstBtn.click();
+        }
+      });
+    }
+
+    // PFS 展開/收合
+    var pfsBtn = document.querySelector('.pfs-toggle');
+    var pfsDetail = document.querySelector('.pfs-detail');
+    if(pfsBtn && pfsDetail) {
+      pfsBtn.addEventListener('click', function() {
+        var show = pfsDetail.style.display === 'block';
+        pfsDetail.style.display = show ? 'none' : 'block';
+      });
+      pfsBtn.addEventListener('keypress', function(e) {
+        if(e.key === 'Enter' || e.key === ' ') {
+          pfsBtn.click();
         }
       });
     }
