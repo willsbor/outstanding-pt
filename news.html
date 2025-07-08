@@ -28,26 +28,22 @@
       background: #f8fafc;
       color: #222;
     }
-    .section {
-      padding: 48px 20px 36px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-    }
-    .section h2 {
-      margin-bottom: 24px;
-      font-size: 1.6rem;
-      color: #0066cc;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    footer {
-      background: #e6f0fa;
-      padding: 22px 10px;
+    header {
+      background: linear-gradient(90deg, #0072c6 60%, #005fa3 100%);
+      color: white;
+      padding: 32px 20px 24px 20px;
       text-align: center;
-      color: #555;
-      font-size: 1rem;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
     }
     nav {
       background: #e6f0fa;
@@ -80,40 +76,199 @@
       background: #0066cc;
       color: #fff;
     }
-    header {
-      background: none;
-      color: #222;
-      padding: 32px 20px 24px 20px;
-      text-align: center;
-      letter-spacing: 2px;
+    .section {
+      padding: 48px 20px 36px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
-    header h1 {
-      margin: 0 0 8px 0;
-      font-size: 2.2rem;
+    .section h2 {
+      margin-bottom: 24px;
+      font-size: 1.6rem;
+      color: #0066cc;
       font-weight: 700;
+      letter-spacing: 1px;
     }
-    header p {
-      margin: 0;
-      font-size: 1.1rem;
-      opacity: 0.9;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .contact-info {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border: 1.5px solid #e3eaf2;
+    }
+    .contact-info h3 {
+      color: #1a3d6d;
+      margin: 0 0 20px 0;
+      font-size: 1.3rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .contact-icon {
+      font-size: 1.5rem;
+      margin-right: 16px;
+      color: #0066cc;
+      min-width: 32px;
+      text-align: center;
+    }
+    .contact-text {
+      line-height: 1.6;
+    }
+    .contact-text a {
+      color: #0066cc;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-text a:hover {
+      color: #004999;
+      text-decoration: underline;
+    }
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border: 1.5px solid #e3eaf2;
+      background: #fff;
+      height: 450px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .social-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+    footer {
+      background: #e6f0fa;
+      padding: 22px 10px;
+      text-align: center;
+      color: #555;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .map-container {
+        height: 300px;
+      }
+    }
+    .clinic-image {
+      margin-bottom: 24px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+    .clinic-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .transportation-info {
+      margin-top: 24px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .transport-item {
+      margin-top: 16px;
+    }
+    .transport-item h4 {
+      color: #0066cc;
+      margin-bottom: 8px;
+    }
+    .transport-item p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .floating-btn {
+      position: fixed;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+      z-index: 1000;
+      text-decoration: none;
+      border: 2.5px solid #00B900;
+    }
+    .floating-btn.fb {
+      border-color: #1877F2;
+      bottom: 100px;
+    }
+    .floating-btn.line {
+      border-color: #00B900;
+      bottom: 30px;
+    }
+    .floating-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .floating-btn img {
+      width: 36px;
+      height: 36px;
+      display: block;
     }
     @media (max-width: 600px) {
-      .section {
-        padding: 32px 8px 20px 8px;
+      .floating-btn {
+        width: 50px;
+        height: 50px;
+        right: 20px;
       }
-      nav ul {
-        flex-direction: column;
-        gap: 0;
+      .floating-btn img {
+        width: 30px;
+        height: 30px;
       }
-      nav ul li {
-        margin: 0;
+      .floating-btn.fb {
+        bottom: 80px;
       }
-      nav ul li a {
-        padding: 12px 10px;
-        font-size: 1rem;
-        border-radius: 16px;
-        text-align: left;
+      .floating-btn.line {
+        bottom: 20px;
       }
+    }
+    .mobile-break { display: none; }
+    @media (max-width: 600px) {
+      .mobile-break { display: inline; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
