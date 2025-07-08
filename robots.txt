@@ -4,3 +4,4 @@ Sitemap: https://www.outstandingpt.com/sitemap.xml
 
 # Optimize crawling
 Crawl-delay: 10 
+Allow: /news.html 
