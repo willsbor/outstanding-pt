@@ -499,6 +499,29 @@
       max-width: 1100px;
       margin: 40px auto;
     }
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .faq-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e3eaf2;
+    }
+    .faq-question {
+      margin: 0 0 10px 0;
+      color: #1a3d6d;
+      font-size: 1.15rem;
+    }
+    .faq-answer {
+      margin: 0;
+      color: #444;
+      line-height: 1.6;
+    }
 
     .gallery {
       display: grid;
@@ -709,6 +732,28 @@
     </div>
   </section>  
 
+  <section class="section" style="background:#f4faff; border-radius:16px; margin-bottom:40px;">
+    <h2>常見問答 (FAQ)</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h3 class="faq-question">Q：卓立物理治療所提供哪些治療服務？</h3>
+        <p class="faq-answer">我們提供運動治療、徒手治療、高階儀器治療等多元服務，包含脊椎減壓運動、動態神經肌肉穩定術、骨盆底肌鍛鍊等。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Q：如何預約物理治療？</h3>
+        <p class="faq-answer">您可以透過電話、LINE 或現場預約。建議提前來電或加 LINE 預約，以確保時段。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Q：診所交通方便嗎？</h3>
+        <p class="faq-answer">本所位於台北市中山區南京東路二段100號3樓之2，鄰近松江南京捷運站1號出口，交通便利。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Q：初診需要準備什麼？</h3>
+        <p class="faq-answer">請攜帶健保卡與相關醫療資料，穿著方便活動的服裝。</p>
+      </div>
+    </div>
+  </section>
+
   <a href="https://lin.ee/jYtExDW" class="floating-btn line" target="_blank" rel="noopener noreferrer"
      onclick="gtag('event', 'click', {event_category: 'outbound', event_label: 'LINE', value: 1, link_url: this.href});">
     <img src="images/LINE_Brand_icon.webp" alt="LINE" />
@@ -721,6 +766,7 @@
   </main>
   <footer>
     <p>© 2025 卓立物理治療所（台北院區）</p>
+    <p style="font-size: 0.85rem; color: #888; max-width: 800px; margin: 10px auto 0; line-height: 1.5;">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
   </footer>
 </body>
 </html>
