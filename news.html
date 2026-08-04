@@ -166,6 +166,17 @@
       display: flex;
       justify-content: center;
       min-height: 600px;
+      max-width: 100%;
+      overflow: hidden;
+      width: 100%;
+    }
+    .fb-page {
+      max-width: 100%;
+    }
+    .fb-page.fb_iframe_widget,
+    .fb-page.fb_iframe_widget span,
+    .fb-page.fb_iframe_widget iframe {
+      max-width: 100% !important;
     }
     .fb-fallback {
       color: #666;
@@ -293,6 +304,14 @@
       }
       .news-action {
         justify-content: center;
+      }
+      .fb-wrapper {
+        min-height: 520px;
+      }
+    }
+    @media (max-width: 480px) {
+      .news-card {
+        padding: 16px;
       }
       .fb-wrapper {
         min-height: 520px;
@@ -430,6 +449,17 @@
       </div>
       <p class="fb-fallback">Facebook 動態若未正常顯示，請改至 <a href="https://www.facebook.com/profile.php?id=61575688389384" target="_blank" rel="noopener noreferrer">卓立物理治療所 Facebook 粉絲專頁</a> 查看。</p>
     </div>
+    <script>
+      (function () {
+        const fbPage = document.querySelector('.fb-page');
+        const fbWrapper = document.querySelector('.fb-wrapper');
+        if (!fbPage || !fbWrapper) return;
+
+        const width = Math.min(500, Math.max(280, Math.floor(fbWrapper.clientWidth || 500)));
+        fbPage.setAttribute('data-width', String(width));
+        fbPage.style.width = width + 'px';
+      })();
+    </script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v19.0"></script>
   </section>
   </main>
