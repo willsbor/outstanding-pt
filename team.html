@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>醫療團隊 - 卓立物理治療所（台北院區）</title>
+  <title>醫療團隊與跨專業醫療照護網絡 - 卓立物理治療所（台北院區）</title>
   <meta property="og:url" content="https://www.outstandingpt.com/team.html">
   <link rel="canonical" href="https://www.outstandingpt.com/team.html">
   <meta property="og:image" content="https://www.outstandingpt.com/images/zhuoli-sign.webp">
-  <meta name="description" content="卓立物理治療所專業醫療團隊介紹，包含物理治療師背景、專長與經歷，為您提供最專業的復健治療服務。">
-  <meta name="keywords" content="醫療團隊,物理治療師,專業團隊,復健,卓立物理治療所,台北物理治療">
+  <meta name="description" content="卓立物理治療所專業醫療團隊與跨專業醫療照護網絡介紹，包含物理治療師背景、專長、經歷，以及協作醫療夥伴資訊。">
+  <meta name="keywords" content="醫療團隊,跨專業醫療照護網絡,物理治療師,中醫師,黃彥鈞,專業團隊,復健,卓立物理治療所,台北物理治療">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="醫療團隊 - 卓立物理治療所（台北院區）">
-  <meta property="og:description" content="卓立物理治療所專業醫療團隊介紹，包含物理治療師背景、專長與經歷，為您提供最專業的復健治療服務。">
+  <meta property="og:title" content="醫療團隊與跨專業醫療照護網絡 - 卓立物理治療所（台北院區）">
+  <meta property="og:description" content="卓立物理治療所專業醫療團隊與跨專業醫療照護網絡介紹，讓復健照護能在不同專業之間延續。">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -21,6 +21,86 @@
       "image": "https://www.outstandingpt.com/images/zhuoli-sign.webp",
       "description": "專業的物理治療團隊，提供優質的復健治療服務",
       "url": "https://www.outstandingpt.com/team.html"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.outstandingpt.com/team.html#webpage",
+      "url": "https://www.outstandingpt.com/team.html",
+      "name": "醫療團隊與跨專業醫療照護網絡 - 卓立物理治療所（台北院區）",
+      "description": "卓立物理治療所台北院區醫療團隊與跨專業醫療照護網絡介紹，包含物理治療師專長、經歷與協作醫療夥伴資訊。",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "卓立物理治療所（台北院區）",
+        "url": "https://www.outstandingpt.com/"
+      },
+      "about": {
+        "@type": "MedicalClinic",
+        "name": "卓立物理治療所（台北院區）",
+        "url": "https://www.outstandingpt.com/"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "醫療團隊與跨專業醫療照護網絡",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Person",
+              "name": "劉柏孜",
+              "jobTitle": "物理治療師",
+              "worksFor": {
+                "@type": "MedicalClinic",
+                "name": "卓立物理治療所（台北院區）"
+              },
+              "knowsAbout": ["脊椎螺旋穩定運動", "動態神經肌肉穩定運動", "骨盆底肌鍛鍊", "徒手治療", "高階儀器治療"]
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Person",
+              "name": "謝雅雯",
+              "jobTitle": "物理治療師",
+              "worksFor": {
+                "@type": "MedicalClinic",
+                "name": "卓立物理治療所（台中院區）"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Person",
+              "name": "卓宗成",
+              "jobTitle": "物理治療師",
+              "worksFor": {
+                "@type": "MedicalClinic",
+                "name": "卓立物理治療所（彰化院區）"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Physician",
+              "name": "黃彥鈞",
+              "medicalSpecialty": ["中醫", "肌筋膜疼痛", "乾針", "徒手治療"],
+              "url": "https://tcmdrerichuang.com/",
+              "sameAs": [
+                "https://www.facebook.com/profile.php?id=100078069915625",
+                "https://www.instagram.com/tcmdrerichuang"
+              ]
+            }
+          }
+        ]
+      }
     }
   </script>
   <style>
@@ -75,7 +155,8 @@
       border-radius: 24px;
       transition: background 0.2s, color 0.2s;
     }
-    nav ul li a:hover {
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
       background: #0066cc;
       color: #fff;
     }
@@ -91,12 +172,47 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
+    .team-section,
+    .network-section {
+      scroll-margin-top: 96px;
+    }
+    .section-bookmarks {
+      padding-bottom: 12px;
+    }
+    .bookmark-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      background: #fff;
+      border: 1.5px solid #d9e6f2;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      padding: 8px;
+    }
+    .bookmark-links a {
+      color: #0066cc;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.4;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .bookmark-links a:hover {
+      background: #e6f0fa;
+      color: #004999;
+    }
     .doctor-info {
       background: #fff;
       padding: 30px;
-      border-radius: 15px;
+      border-radius: 12px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      margin: 20px 0;
+      margin: 24px 0;
       border: 1.5px solid #e3eaf2;
       display: flex;
       gap: 30px;
@@ -104,8 +220,10 @@
     }
     .doctor-image {
       width: 200px;
+      aspect-ratio: 3 / 4;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      object-fit: cover;
     }
     .doctor-details {
       flex: 1;
@@ -113,18 +231,123 @@
     }
     .doctor-info h3 {
       color: #1a3d6d;
-      margin: 0 0 15px 0;
+      margin: 0 0 12px 0;
       font-size: 1.3rem;
+      line-height: 1.35;
     }
     .doctor-info p {
       margin: 8px 0;
       line-height: 1.6;
     }
+    .doctor-info h4 {
+      color: #1a3d6d;
+      margin: 22px 0 8px 0;
+      font-size: 1.05rem;
+    }
     .doctor-info ul {
       padding-left: 20px;
-      line-height: 1.6;
+      line-height: 1.75;
       margin: 0;
-      list-style-position: inside;
+    }
+    .doctor-info ul ul {
+      margin-top: 6px;
+      padding-left: 22px;
+    }
+    .section-intro {
+      color: #444;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 0 0 24px 0;
+      max-width: 900px;
+    }
+    .network-section {
+      border-top: 1px solid #d9e6f2;
+      margin-top: 12px;
+      padding-top: 44px;
+    }
+    .network-card {
+      background: #fff;
+      border: 1.5px solid #d8e7f3;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      margin: 20px 0;
+      padding: 30px;
+    }
+    .network-card h3 {
+      color: #1a3d6d;
+      margin: 0 0 10px 0;
+      font-size: 1.35rem;
+    }
+    .network-role {
+      color: #555;
+      font-size: 1.03rem;
+      line-height: 1.6;
+      margin: 0 0 18px 0;
+    }
+    .network-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 22px 0;
+    }
+    .network-tags li {
+      background: #eaf5f2;
+      border: 1px solid #cce4dc;
+      border-radius: 999px;
+      color: #1f6b5b;
+      font-size: 0.95rem;
+      padding: 7px 14px;
+    }
+    .network-referral {
+      background: #f4faff;
+      border-left: 4px solid #0066cc;
+      border-radius: 10px;
+      color: #294056;
+      line-height: 1.8;
+      margin: 18px 0 22px 0;
+      padding: 18px 20px;
+    }
+    .network-label {
+      color: #0066cc;
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .network-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .network-links a {
+      align-items: center;
+      background: #e6f0fa;
+      border-radius: 999px;
+      color: #0066cc;
+      display: inline-flex;
+      font-weight: 700;
+      min-height: 40px;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .network-links a:hover {
+      background: #0066cc;
+      color: #fff;
+    }
+    .network-meta {
+      color: #666;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .network-note {
+      color: #666;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-top: 18px;
     }
     footer {
       background: #e6f0fa;
@@ -133,6 +356,13 @@
       color: #555;
       font-size: 1rem;
       letter-spacing: 1px;
+    }
+    .footer-note {
+      color: #888;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 10px auto 0;
+      max-width: 800px;
     }
     .floating-btn {
       position: fixed;
@@ -189,6 +419,17 @@
         align-items: center;
         gap: 18px;
       }
+      .section-bookmarks {
+        padding-top: 32px;
+      }
+      .bookmark-links {
+        gap: 8px;
+      }
+      .bookmark-links a {
+        flex: 1 1 100%;
+        justify-content: center;
+        font-size: 1rem;
+      }
       .doctor-image {
         width: 70vw;
         max-width: 260px;
@@ -200,7 +441,9 @@
         text-align: left;
       }
       .doctor-details h3,
-      .doctor-details p,
+      .doctor-details p {
+        text-align: center;
+      }
       .doctor-details h4,
       .doctor-details ul {
         text-align: left;
@@ -209,11 +452,21 @@
         padding-left: 20px;
       }
       .mobile-break { display: block; height: 0; }
-      .doctor-details h3 {
-        text-align: center;
+      .network-card {
+        padding: 22px 18px;
       }
-      .doctor-details p {
-        text-align: center;
+      .network-tags {
+        gap: 8px;
+      }
+      .network-tags li {
+        font-size: 0.9rem;
+      }
+      .network-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .network-links a {
+        justify-content: center;
       }
     }
     .mobile-break { display: none; }
@@ -244,12 +497,22 @@
       .then(res => res.text())
       .then(html => {
         document.body.insertAdjacentHTML('afterbegin', html);
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const currentLink = document.querySelector(`nav a[href="${currentPath}"]`);
+        if (currentLink) currentLink.setAttribute('aria-current', 'page');
         document.getElementById('header-nav-container').remove();
       });
   </script>
 
   <main>
-  <section class="section">
+  <section class="section section-bookmarks" aria-label="頁面章節">
+    <div class="bookmark-links">
+      <a href="#medical-team">醫療團隊</a>
+      <a href="#care-network">跨專業醫療照護網絡</a>
+    </div>
+  </section>
+
+  <section class="section team-section" id="medical-team">
     <h2>醫療團隊</h2>
     <div class="doctor-info">
       <img src="images/liu-po-zi.webp" alt="台北院區院長 劉柏孜 物理治療師照片" class="doctor-image" loading="lazy">
@@ -371,10 +634,39 @@
     </div>
   </section>
 
+  <section class="section network-section" id="care-network">
+    <h2>跨專業醫療照護網絡</h2>
+    <p class="section-intro">臨床照護有時需要不同專業接續合作。卓立物理治療所重視診間評估、復健訓練與跨領域轉介之間的銜接，讓個案在物理治療之外，也能依實際需求取得合適的醫療資源。</p>
+
+    <div class="network-card">
+      <h3>黃彥鈞 中醫師</h3>
+      <p class="network-role">中醫徒手・內針傷整合・精準全人醫療</p>
+      <ul class="network-tags">
+        <li>肌筋膜疼痛</li>
+        <li>乾針與徒手治療</li>
+        <li>中醫傷科與針灸</li>
+        <li>內科整合照護</li>
+      </ul>
+      <p>黃彥鈞中醫師為台灣中醫師，專注於肌筋膜徒手、乾針與中醫傷科整合，並具瑞士 D.G.S.A. 官方認證乾針與徒手治療師資歷。臨床上擅長以結構評估、徒手處理、乾針與針藥併用的方式，協助處理肌筋膜疼痛、結構問題，以及伴隨內科狀態的複雜不適。</p>
+      <div class="network-referral">
+        <span class="network-label">協作情境</span>
+        當個案的疼痛或功能問題牽涉較複雜的肌筋膜張力、反覆性結構疼痛，或需要中醫針灸、傷科與內科整合評估時，可依診間判斷轉介黃醫師接續照護。物理治療著重功能評估、動作控制與運動訓練；中醫傷科與針藥整合則提供另一個臨床視角，讓照護在不同專業間延續。
+      </div>
+      <div class="network-links">
+        <a href="https://tcmdrerichuang.com/" target="_blank" rel="noopener noreferrer">官方網站</a>
+        <a href="https://www.facebook.com/profile.php?id=100078069915625" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/tcmdrerichuang" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+      <p class="network-meta">服務院所：太初中醫診所、東門中醫診所（台北）</p>
+    </div>
+
+    <p class="network-note">跨專業照護夥伴皆為獨立執業之專業人員；實際轉介與治療安排仍依現場評估、臨床判斷與個案需求決定。</p>
+  </section>
+
   </main>
   <footer>
-    <p>© 2025 卓立物理治療所（台北院區）</p>
-    <p style="font-size: 0.85rem; color: #888; max-width: 800px; margin: 10px auto 0; line-height: 1.5;">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
+    <p>© 2026 卓立物理治療所（台北院區）</p>
+    <p class="footer-note">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
   </footer>
 
   <div id="floating-btns-container"></div>
@@ -386,4 +678,4 @@
       });
   </script>
 </body>
-</html> 
+</html>

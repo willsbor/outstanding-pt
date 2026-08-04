@@ -23,6 +23,21 @@
       "url": "https://www.outstandingpt.com/recruitment.html"
     }
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.outstandingpt.com/recruitment.html#webpage",
+      "url": "https://www.outstandingpt.com/recruitment.html",
+      "name": "人才招募 - 卓立物理治療所（台北院區）",
+      "description": "卓立物理治療所台北院區人才招募資訊，包含物理治療師職缺條件、待遇福利、工作地點與應徵方式。",
+      "about": {
+        "@type": "MedicalClinic",
+        "name": "卓立物理治療所（台北院區）",
+        "url": "https://www.outstandingpt.com/"
+      }
+    }
+  </script>
   <style>
     body {
       font-family: 'Noto Sans TC', Arial, sans-serif;
@@ -75,7 +90,8 @@
       border-radius: 24px;
       transition: background 0.2s, color 0.2s;
     }
-    nav ul li a:hover {
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
       background: #0066cc;
       color: #fff;
     }
@@ -91,10 +107,20 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
+    .section-intro {
+      background: #f4faff;
+      border-left: 4px solid #0066cc;
+      border-radius: 12px;
+      color: #444;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 0 0 24px 0;
+      padding: 18px 20px;
+    }
     .job-post {
       background: #fff;
       padding: 32px;
-      border-radius: 16px;
+      border-radius: 12px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       margin: 20px 0;
       border: 1.5px solid #e3eaf2;
@@ -117,13 +143,15 @@
     }
     .meta-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 8px;
       color: #555;
+      line-height: 1.6;
     }
     .meta-item span {
       color: #0066cc;
-      font-weight: 500;
+      font-weight: 700;
+      white-space: nowrap;
     }
     .job-section {
       margin: 24px 0;
@@ -139,17 +167,46 @@
     .job-section ul {
       padding-left: 24px;
       margin: 12px 0;
-      line-height: 1.6;
+      line-height: 1.75;
     }
     .job-section p {
       margin: 8px 0;
-      line-height: 1.6;
+      line-height: 1.75;
+    }
+    .apply-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .apply-btn {
+      align-items: center;
+      background: #0066cc;
+      border-radius: 999px;
+      box-shadow: 0 2px 10px rgba(0,102,204,0.16);
+      color: #fff !important;
+      display: inline-flex;
+      font-weight: 700;
+      min-height: 44px;
+      padding: 8px 18px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .apply-btn:hover {
+      background: #005fa3;
+      transform: translateY(-2px);
+      text-decoration: none !important;
     }
     .contact-info {
       background: #f8fafc;
       padding: 20px;
       border-radius: 12px;
       margin-top: 24px;
+    }
+    .contact-info h4 {
+      color: #0066cc;
+      font-size: 1.2rem;
+      margin: 0 0 12px 0;
     }
     .contact-info p {
       margin: 8px 0;
@@ -168,6 +225,13 @@
       color: #555;
       font-size: 1rem;
       letter-spacing: 1px;
+    }
+    .footer-note {
+      color: #888;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 10px auto 0;
+      max-width: 800px;
     }
     .floating-btn {
       position: fixed;
@@ -219,6 +283,15 @@
       .floating-btn.line {
         bottom: 20px;
       }
+      .job-post {
+        padding: 24px 18px;
+      }
+      .apply-actions {
+        flex-direction: column;
+      }
+      .apply-btn {
+        justify-content: center;
+      }
     }
     .mobile-break { display: none; }
     @media (max-width: 600px) {
@@ -247,6 +320,9 @@
       .then(res => res.text())
       .then(html => {
         document.body.insertAdjacentHTML('afterbegin', html);
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const currentLink = document.querySelector(`nav a[href="${currentPath}"]`);
+        if (currentLink) currentLink.setAttribute('aria-current', 'page');
         document.getElementById('header-nav-container').remove();
       });
   </script>
@@ -254,6 +330,7 @@
   <main>
   <section class="section">
     <h2>人才招募</h2>
+    <p class="section-intro">卓立物理治療所（台北院區）歡迎對徒手治療、運動治療與高階儀器治療有熱情的物理治療師加入。這裡整理職缺條件、工作資訊、待遇福利與應徵方式，方便求職者快速確認是否適合投遞履歷。</p>
     <div class="job-post">
       <div class="job-header">
         <h3>物理治療師👩🏻‍⚕️👨🏻‍⚕️（男女皆可）</h3>
@@ -312,14 +389,17 @@
         <p>聯絡人：劉院長</p>
         <p>電話：<a href="tel:0225213958">02-25213958</a></p>
         <p>地址：台北市中山區南京東路二段100號3樓之2</p>
+        <div class="apply-actions">
+          <a href="mailto:liupozi281984@gmail.com?subject=應徵卓立物理治療所台北院區物理治療師" class="apply-btn">寄送履歷</a>
+        </div>
       </div>
     </div>
   </section>
 
   </main>
   <footer>
-    <p>© 2025 卓立物理治療所（台北院區）</p>
-    <p style="font-size: 0.85rem; color: #888; max-width: 800px; margin: 10px auto 0; line-height: 1.5;">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
+    <p>© 2026 卓立物理治療所（台北院區）</p>
+    <p class="footer-note">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
   </footer>
 
   <div id="floating-btns-container"></div>
@@ -331,4 +411,4 @@
       });
   </script>
 </body>
-</html> 
+</html>

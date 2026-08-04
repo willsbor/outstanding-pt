@@ -30,6 +30,26 @@
       "url": "https://www.outstandingpt.com/news.html"
     }
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://www.outstandingpt.com/news.html#webpage",
+      "url": "https://www.outstandingpt.com/news.html",
+      "name": "最新消息 - 卓立物理治療所（台北院區）",
+      "description": "卓立物理治療所台北院區最新消息、公告與 Facebook 粉絲專頁更新。",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "卓立物理治療所（台北院區）",
+        "url": "https://www.outstandingpt.com/"
+      },
+      "about": {
+        "@type": "MedicalClinic",
+        "name": "卓立物理治療所（台北院區）",
+        "url": "https://www.outstandingpt.com/"
+      }
+    }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -83,7 +103,8 @@
       border-radius: 24px;
       transition: background 0.2s, color 0.2s;
     }
-    nav ul li a:hover {
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
       background: #0066cc;
       color: #fff;
     }
@@ -98,6 +119,68 @@
       color: #0066cc;
       font-weight: 700;
       letter-spacing: 1px;
+    }
+    .section-intro {
+      background: #f4faff;
+      border-left: 4px solid #0066cc;
+      border-radius: 12px;
+      color: #444;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 0 0 24px 0;
+      padding: 18px 20px;
+    }
+    .news-card {
+      background: #fff;
+      border: 1.5px solid #e3eaf2;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 24px;
+    }
+    .news-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0 0 0;
+    }
+    .news-action {
+      align-items: center;
+      background: #0066cc;
+      border-radius: 999px;
+      box-shadow: 0 2px 10px rgba(0,102,204,0.16);
+      color: #fff;
+      display: inline-flex;
+      font-weight: 700;
+      min-height: 44px;
+      padding: 8px 18px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .news-action:hover {
+      background: #005fa3;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .fb-wrapper {
+      display: flex;
+      justify-content: center;
+      min-height: 600px;
+    }
+    .fb-fallback {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 16px 0 0 0;
+      text-align: center;
+    }
+    .fb-fallback a {
+      color: #0066cc;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .fb-fallback a:hover {
+      text-decoration: underline;
     }
     .contact-grid {
       display: grid;
@@ -188,12 +271,31 @@
       font-size: 1rem;
       letter-spacing: 1px;
     }
+    .footer-note {
+      color: #888;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 10px auto 0;
+      max-width: 800px;
+    }
     @media (max-width: 768px) {
       .contact-grid {
         grid-template-columns: 1fr;
       }
       .map-container {
         height: 300px;
+      }
+      .news-card {
+        padding: 20px 16px;
+      }
+      .news-actions {
+        flex-direction: column;
+      }
+      .news-action {
+        justify-content: center;
+      }
+      .fb-wrapper {
+        min-height: 520px;
       }
     }
     .clinic-image {
@@ -298,6 +400,9 @@
       .then(res => res.text())
       .then(html => {
         document.body.insertAdjacentHTML('afterbegin', html);
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const currentLink = document.querySelector(`nav a[href="${currentPath}"]`);
+        if (currentLink) currentLink.setAttribute('aria-current', 'page');
         document.getElementById('header-nav-container').remove();
       });
   </script>
@@ -305,24 +410,33 @@
   <main>
   <section class="section">
     <h2>最新消息</h2>
-    <div id="fb-root"></div>
-    <div class="fb-page"
-      data-href="https://www.facebook.com/profile.php?id=61575688389384"
-      data-tabs="timeline"
-      data-width="500"
-      data-height="600"
-      data-small-header="false"
-      data-adapt-container-width="true"
-      data-hide-cover="false"
-      data-show-facepile="true">
+    <p class="section-intro">卓立物理治療所（台北院區）的最新公告、衛教分享與活動資訊會同步更新於 Facebook 粉絲專頁。若下方動態載入較慢，可直接前往粉絲專頁查看最新貼文。</p>
+    <div class="news-card">
+      <div id="fb-root"></div>
+      <div class="fb-wrapper" aria-label="Facebook 最新貼文">
+        <div class="fb-page"
+          data-href="https://www.facebook.com/profile.php?id=61575688389384"
+          data-tabs="timeline"
+          data-width="500"
+          data-height="600"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true">
+        </div>
+      </div>
+      <div class="news-actions">
+        <a href="https://www.facebook.com/profile.php?id=61575688389384" target="_blank" rel="noopener noreferrer" class="news-action">前往 Facebook 粉絲專頁</a>
+      </div>
+      <p class="fb-fallback">Facebook 動態若未正常顯示，請改至 <a href="https://www.facebook.com/profile.php?id=61575688389384" target="_blank" rel="noopener noreferrer">卓立物理治療所 Facebook 粉絲專頁</a> 查看。</p>
     </div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v19.0"></script>
   </section>
   </main>
 
   <footer>
-    <p>© 2025 卓立物理治療所（台北院區）</p>
-    <p style="font-size: 0.85rem; color: #888; max-width: 800px; margin: 10px auto 0; line-height: 1.5;">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
+    <p>© 2026 卓立物理治療所（台北院區）</p>
+    <p class="footer-note">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
   </footer>
 </body>
-</html> 
+</html>

@@ -53,15 +53,9 @@
         },
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Wednesday",
+          "dayOfWeek": ["Wednesday"],
           "opens": "09:00",
-          "closes": "12:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Wednesday",
-          "opens": "18:00",
-          "closes": "21:00"
+          "closes": "18:00"
         },
         {
           "@type": "OpeningHoursSpecification",
@@ -108,6 +102,22 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "本所位於台北市中山區南京東路二段100號3樓之2，鄰近松江南京捷運站1號出口，交通便利。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "第一次預約前需要準備什麼？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "初次預約建議攜帶既有影像檢查、診斷資料或過去治療紀錄，並告知目前主要症狀、疼痛時間、生活與運動需求，方便治療師進行完整評估。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "治療計畫如何安排？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "治療計畫會依現場評估結果、個人目標與身體狀態安排，可能包含徒手治療、運動治療、高階儀器治療與居家訓練建議。"
           }
         }
       ]
@@ -165,7 +175,8 @@
       border-radius: 24px;
       transition: background 0.2s, color 0.2s;
     }
-    nav ul li a:hover {
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
       background: #0066cc;
       color: #fff;
     }
@@ -237,6 +248,51 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
+    .section-intro {
+      color: #444;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 0 0 24px 0;
+      max-width: 900px;
+    }
+    .section-link {
+      margin-top: 20px;
+      text-align: right;
+    }
+    .section-link a {
+      align-items: center;
+      color: #0066cc;
+      display: inline-flex;
+      font-weight: 700;
+      min-height: 44px;
+      text-decoration: none;
+    }
+    .section-link a:hover {
+      color: #004999;
+      text-decoration: underline;
+    }
+    .treatment-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .treatment-card {
+      background: #fff;
+      border: 1.5px solid #e3eaf2;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 24px;
+    }
+    .treatment-card h3 {
+      color: #0066cc;
+      font-size: 1.2rem;
+      margin: 0 0 12px 0;
+    }
+    .treatment-card ul {
+      line-height: 1.75;
+      margin: 0;
+      padding-left: 22px;
+    }
     .services {
       display: flex;
       flex-wrap: wrap;
@@ -277,6 +333,35 @@
       margin: 8px 0;
       letter-spacing: 0.5px;
     }
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .contact-action {
+      align-items: center;
+      background: #e6f0fa;
+      border-radius: 999px;
+      color: #0066cc;
+      display: inline-flex;
+      font-weight: 700;
+      min-height: 44px;
+      padding: 8px 18px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .contact-action.primary {
+      background: #0066cc;
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0,102,204,0.16);
+    }
+    .contact-action:hover {
+      background: #005fa3;
+      color: #fff;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
     footer {
       background: #e6f0fa;
       padding: 22px 10px;
@@ -284,6 +369,13 @@
       color: #555;
       font-size: 1rem;
       letter-spacing: 1px;
+    }
+    .footer-note {
+      color: #888;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 10px auto 0;
+      max-width: 800px;
     }
     @media (max-width: 900px) {
       .services {
@@ -300,6 +392,18 @@
       .services {
         flex-direction: column;
         gap: 12px;
+      }
+      .section-link {
+        text-align: left;
+      }
+      .treatment-card {
+        padding: 20px 18px;
+      }
+      .contact-actions {
+        flex-direction: column;
+      }
+      .contact-action {
+        justify-content: center;
       }
       .service-item {
         max-width: 100%;
@@ -514,6 +618,11 @@
       color: #444;
       line-height: 1.6;
     }
+    .faq-section {
+      background: #f4faff;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
 
     .gallery {
       display: grid;
@@ -585,6 +694,9 @@
       .then(res => res.text())
       .then(html => {
         document.body.insertAdjacentHTML('afterbegin', html);
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const currentLink = document.querySelector(`nav a[href="${currentPath}"]`);
+        if (currentLink) currentLink.setAttribute('aria-current', 'page');
         document.getElementById('header-nav-container').remove();
       });
   </script>
@@ -600,35 +712,36 @@
 
   <section class="section">
     <h2>治療項目</h2>
-    <div class="treatment-category">
-      <h3>運動治療（個人/小團體）</h3>
-      <ul>
-        <li>脊椎減壓運動 SPS</li>
-        <li>動態神經肌肉穩定術 DNS</li>
-        <li>骨盆底肌鍛鍊 PFS</li>
-      </ul>
+    <p class="section-intro">卓立物理治療所（台北院區）提供運動治療、徒手治療與高階儀器治療，依照現場評估與個人目標安排合適的復健計畫。</p>
+    <div class="treatment-grid">
+      <div class="treatment-card">
+        <h3>運動治療（個人/小團體）</h3>
+        <ul>
+          <li>脊椎減壓運動 SPS</li>
+          <li>動態神經肌肉穩定術 DNS</li>
+          <li>骨盆底肌鍛鍊 PFS</li>
+        </ul>
+      </div>
+      <div class="treatment-card">
+        <h3>徒手治療</h3>
+        <ul>
+          <li>顱薦平衡 CST & SER</li>
+          <li>內臟筋膜放鬆 VM</li>
+          <li>淋巴引流 LDT</li>
+          <li>拮抗鬆弛術 SCS</li>
+        </ul>
+      </div>
+      <div class="treatment-card">
+        <h3>高階儀器</h3>
+        <ul>
+          <li>聚焦式震波 ESWT</li>
+          <li>高能量雷射 HILT</li>
+          <li>聲波動力平衡治療 KKT</li>
+        </ul>
+      </div>
     </div>
-    <div class="treatment-category">
-      <h3>徒手治療</h3>
-      <ul>
-        <li>顱薦平衡 CST & SER</li>
-        <li>內臟筋膜放鬆 VM</li>
-        <li>淋巴引流 LDT</li>
-        <li>拮抗鬆弛術 SCS</li>
-      </ul>
-    </div>
-    <div class="treatment-category">
-      <h3>高階儀器</h3>
-      <ul>
-        <li>聚焦式震波 ESWT</li>
-        <li>高能量雷射 HILT</li>
-        <li>聲波動力平衡治療 KKT</li>
-      </ul>
-    </div>
-    <div style="text-align: right; margin-top: 20px;">
-      <a href="services.html" style="display: inline-block; color: #0066cc; text-decoration: none; font-weight: 500; padding: 8px 0;">
-        查看更多治療項目 →
-      </a>
+    <div class="section-link">
+      <a href="services.html">查看更多治療項目 →</a>
     </div>
   </section>
 
@@ -715,16 +828,14 @@
       <p>地址：104台北市中山區南京東路二段100號3樓之2</p>
       <p class="location-info">松江南京捷運站（1號出口）往左轉 三豐大樓內</p>
       <p>服務信箱：<a href="mailto:outstanding.pt.taipei@gmail.com">outstanding.pt.taipei@gmail.com</a></p>
+      <div class="contact-actions">
+        <a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" class="contact-action primary">LINE 線上預約</a>
+        <a href="contact.html" class="contact-action">查看交通與聯絡方式</a>
+      </div>
     </div>
-    <div class="qr-code">
-      <a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #00B900; font-weight: bold;">
-        點擊加入 LINE 好友
-      </a>
-      <p>歡迎線上預約</p>
-    </div>
-  </section>  
+  </section>
 
-  <section class="section" style="background:#f4faff; border-radius:16px; margin-bottom:40px;">
+  <section class="section faq-section">
     <h2>常見問答 (FAQ)</h2>
     <div class="faq-container">
       <div class="faq-item">
@@ -738,6 +849,14 @@
       <div class="faq-item">
         <h3 class="faq-question">Q：診所交通方便嗎？</h3>
         <p class="faq-answer">本所位於台北市中山區南京東路二段100號3樓之2，鄰近松江南京捷運站1號出口，交通便利。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Q：第一次預約前需要準備什麼？</h3>
+        <p class="faq-answer">初次預約建議攜帶既有影像檢查、診斷資料或過去治療紀錄，並告知目前主要症狀、疼痛時間、生活與運動需求，方便治療師進行完整評估。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Q：治療計畫如何安排？</h3>
+        <p class="faq-answer">治療計畫會依現場評估結果、個人目標與身體狀態安排，可能包含徒手治療、運動治療、高階儀器治療與居家訓練建議。</p>
       </div>
     </div>
   </section>
@@ -753,8 +872,8 @@
 
   </main>
   <footer>
-    <p>© 2025 卓立物理治療所（台北院區）</p>
-    <p style="font-size: 0.85rem; color: #888; max-width: 800px; margin: 10px auto 0; line-height: 1.5;">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
+    <p>© 2026 卓立物理治療所（台北院區）</p>
+    <p class="footer-note">本網站提供的復健與運動治療資訊由專業物理治療師團隊撰寫，僅供衛教參考。實際治療計畫需由現場專業評估後決定。</p>
   </footer>
 </body>
 </html>
