@@ -1030,6 +1030,7 @@
     gtag('js', new Date());
     gtag('config', 'G-XBVCMTFZMG');
   </script>
+  <script src="analytics-events.js" defer></script>
 </head>
 <body>
   <div id="header-nav-container"></div>
@@ -1107,13 +1108,13 @@
   <section class="section">
     <h2>聯絡與預約</h2>
     <div class="contact-info">
-      <p>主要預約方式：<a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer">LINE 線上預約</a></p>
+      <p>主要預約方式：<a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" data-track-event="line_booking_click" data-track-placement="home_contact">LINE 線上預約</a></p>
       <p>電話：<a href="tel:0225213958">(02) 2521-3958</a></p>
       <p>地址：104台北市中山區南京東路二段100號3樓之2</p>
       <p class="location-info">松江南京捷運站（1號出口）往左轉 三豐大樓內</p>
       <p>服務信箱：<a href="mailto:outstanding.pt.taipei@gmail.com">outstanding.pt.taipei@gmail.com</a></p>
       <div class="contact-actions">
-        <a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" class="contact-action primary line-action">LINE 線上預約</a>
+        <a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" class="contact-action primary line-action" data-track-event="line_booking_click" data-track-placement="home_contact">LINE 線上預約</a>
         <a href="contact.html" class="contact-action">查看交通與完整聯絡方式</a>
       </div>
     </div>
@@ -1218,12 +1219,10 @@
     </div>
   </section>
 
-  <a href="https://lin.ee/jYtExDW" class="floating-btn line" target="_blank" rel="noopener noreferrer"
-     onclick="gtag('event', 'click', {event_category: 'outbound', event_label: 'LINE', value: 1, link_url: this.href});">
+  <a href="https://lin.ee/jYtExDW" class="floating-btn line" target="_blank" rel="noopener noreferrer" data-track-event="line_booking_click" data-track-placement="floating">
     <img src="images/LINE_Brand_icon.webp" alt="LINE" />
   </a>
-  <a href="https://www.facebook.com/profile.php?id=61575688389384" class="floating-btn fb" target="_blank" rel="noopener noreferrer"
-     onclick="gtag('event', 'click', {event_category: 'outbound', event_label: 'Facebook', value: 1, link_url: this.href});">
+  <a href="https://www.facebook.com/profile.php?id=61575688389384" class="floating-btn fb" target="_blank" rel="noopener noreferrer" data-track-event="social_click" data-track-platform="facebook" data-track-placement="floating">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
   </a>
 

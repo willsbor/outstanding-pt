@@ -798,6 +798,7 @@
     gtag('js', new Date());
     gtag('config', 'G-XBVCMTFZMG');
   </script>
+  <script src="analytics-events.js" defer></script>
 </head>
 <body>
   <div id="header-nav-container"></div>
@@ -828,7 +829,7 @@
         <li><strong>2. 提供希望時段</strong>可參考下方預約時間表，留下方便聯繫的時間。</li>
         <li><strong>3. 等候回覆確認</strong>由治療所協助確認治療師與可預約時段。</li>
       </ol>
-      <a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" class="booking-primary">前往 LINE 預約</a>
+      <a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" class="booking-primary" data-track-event="line_booking_click" data-track-placement="contact_main">前往 LINE 預約</a>
     </div>
 
     <div class="contact-grid">
@@ -854,7 +855,7 @@
           </div>
         </div>
         <div class="contact-actions" aria-label="快速聯絡">
-          <a href="https://maps.google.com/?q=台北市中山區南京東路二段100號3樓之2" target="_blank" rel="noopener noreferrer" class="contact-action">Google 地圖導航</a>
+          <a href="https://maps.google.com/?q=台北市中山區南京東路二段100號3樓之2" target="_blank" rel="noopener noreferrer" class="contact-action" data-track-event="map_click" data-track-placement="contact_map">Google 地圖導航</a>
         </div>
         <div class="hours-list">
           <h4>預約時間</h4>
@@ -899,11 +900,11 @@
           </table>
         </div>
         <div class="social-links">
-          <a href="https://www.facebook.com/profile.php?id=61575688389384" target="_blank" class="social-link">
+          <a href="https://www.facebook.com/profile.php?id=61575688389384" target="_blank" class="social-link" data-track-event="social_click" data-track-platform="facebook" data-track-placement="contact_social">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzE4NzdGMiIgZD0iTTI0IDEyLjA3M2MwLTYuNjI3LTUuMzczLTEyLTEyLTEycy0xMiA1LjM3My0xMiAxMmMwIDUuOTkgNC4zODggMTAuOTU0IDEwLjEyNSAxMS44NTR2LTguMzg1SDcuMDc4di0zLjQ3aDMuMDQ3VjkuNDNjMC0zLjAwNyAxLjc5Mi00LjY2OSA0LjUzMy00LjY2OSAxLjMxMiAwIDIuNjg2LjIzNSAyLjY4Ni4yMzV2Mi45NTNoLTEuNTEzYy0xLjQ5IDAtMS45NTUuOTI1LTEuOTU1IDEuODc0djIuMjVoMy4zMjhsLS41MzIgMy40N2gtMi43OTZ2OC4zODVDMTkuNjEyIDIzLjAyNyAyNCAxOC4wNjIgMjQgMTIuMDczeiIvPjwvc3ZnPg==" alt="Facebook" class="social-icon">
             <span>Facebook 粉絲專頁</span>
           </a>
-          <a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" class="social-link">
+          <a href="https://lin.ee/jYtExDW" target="_blank" rel="noopener noreferrer" class="social-link" data-track-event="line_booking_click" data-track-placement="contact_social">
             <img src="images/LINE_Brand_icon.webp" alt="LINE" class="social-icon">
             <span>LINE 官方帳號</span>
           </a>
