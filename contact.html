@@ -52,7 +52,7 @@
         },
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Saturday"],
+          "dayOfWeek": ["Saturday", "Sunday"],
           "opens": "09:00",
           "closes": "17:00"
         }
@@ -89,7 +89,7 @@
           "name": "卓立物理治療所台北院區的預約時間是什麼？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "週一至週五預約時段為 9:00-21:00，週六為 9:00-17:00，週日公休。實際可預約時間仍以 LINE 回覆確認為準。"
+            "text": "週一至週五預約時段為 9:00-21:00，週六與週日為 9:00-17:00。實際可預約時間仍以 LINE 回覆確認為準。"
           }
         }
       ]
@@ -382,6 +382,7 @@
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       margin: 0;
       overflow: hidden;
+      table-layout: fixed;
       width: 100%;
     }
     .schedule-table th,
@@ -404,6 +405,7 @@
       color: #444;
       font-weight: 700;
       white-space: nowrap;
+      width: 16%;
     }
     .schedule-table td.open {
       background: #f0f9ff;
@@ -514,8 +516,8 @@
       }
       .schedule-table th,
       .schedule-table td {
-        font-size: 0.82rem;
-        padding: 7px 4px;
+        font-size: 0.78rem;
+        padding: 7px 2px;
       }
     }
     .clinic-image {
@@ -859,7 +861,7 @@
         </div>
         <div class="hours-list">
           <h4>預約時間</h4>
-          <p class="schedule-note">週日公休</p>
+          <p class="schedule-note">週日亦開放預約；週六、週日下午僅開放預約至 17:00</p>
           <table class="schedule-table">
             <tr>
               <th>時段</th>
@@ -869,6 +871,7 @@
               <th>四</th>
               <th>五</th>
               <th>六</th>
+              <th>日</th>
             </tr>
             <tr>
               <td>9-12</td>
@@ -878,15 +881,17 @@
               <td class="open">●</td>
               <td class="open">●</td>
               <td class="open">●</td>
+              <td class="open">●</td>
             </tr>
             <tr>
-              <td>13-18</td>
+              <td>13-17</td>
               <td class="open">●</td>
               <td class="open">●</td>
               <td class="open">●</td>
               <td class="open">●</td>
               <td class="open">●</td>
-              <td class="open">13-17</td>
+              <td class="open">●</td>
+              <td class="open">●</td>
             </tr>
             <tr>
               <td>18-21</td>
@@ -895,6 +900,7 @@
               <td class="open">●</td>
               <td class="open">●</td>
               <td class="open">●</td>
+              <td class="closed">休</td>
               <td class="closed">休</td>
             </tr>
           </table>
